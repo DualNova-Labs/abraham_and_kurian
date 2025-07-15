@@ -90,6 +90,112 @@
       .w-webflow-badge {
         display: none !important;
   }
+  
+  /* Contact form styles */
+  .contact-from-wrapper {
+    width: 100%;
+  }
+  
+  .container-default.contact-form-container {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .contact-form-block {
+    width: 100%;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .form-fields-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .form-fields-row.single-field {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-field {
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .form-field.message-field {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .form-accent-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .accent-checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox-icon {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .checkbox-icon:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #118a7e;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  input[type="checkbox"]:checked + .w-checkbox-input:after {
+    opacity: 1;
+  }
+  
+  .checkbox-label {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 767px) {
+    .form-fields-row {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
@@ -265,130 +371,67 @@
                     "
                     class="card form-wrapper"
                   >
-                    <div
-                      id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cf88-646ec0ef"
-                      class="form-wrapper w-form"
-                    >
-                      <form
-                        id="wf-form-Contact-V1-Form"
-                        name="wf-form-Contact-V1-Form"
-                        data-name="Contact V1 Form"
-                        method="get"
-                        data-wf-page-id="65b859ba8f546429646ec0ef"
-                        data-wf-element-id="1660dc56-6d2a-18c3-2c5e-2a542123cf89"
-                      >
-                        <div class="w-layout-grid grid-form">
-                          <div
-                            id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cf8b-646ec0ef"
-                          >
-                            <label for="Name-2">Name</label
-                            ><input
-                              class="input medium w-input"
-                              maxlength="256"
-                              name="Name"
-                              data-name="Name"
-                              placeholder="Brian Clark"
-                              type="text"
-                              id="Name-2"
-                              required=""
-                            />
-                          </div>
-                          <div
-                            id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cf8f-646ec0ef"
-                          >
-                            <label for="Email">Email</label
-                            ><input
-                              class="input medium w-input"
-                              maxlength="256"
-                              name="Email"
-                              data-name="Email"
-                              placeholder="example@youremail.com"
-                              type="email"
-                              id="Email"
-                              required=""
-                            />
-                          </div>
-                          <div
-                            id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cf93-646ec0ef"
-                          >
-                            <label for="Phone-2">Phone</label
-                            ><input
-                              class="input medium w-input"
-                              maxlength="256"
-                              name="Phone"
-                              data-name="Phone"
-                              placeholder="(123) 456 - 7890"
-                              type="tel"
-                              id="Phone-2"
-                              required=""
-                            />
-                          </div>
-                          <div
-                            id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cf97-646ec0ef"
-                          >
-                            <label for="Inquiry">Inquiry</label
-                            ><input
-                              class="input medium w-input"
-                              maxlength="256"
-                              name="Inquiry"
-                              data-name="Inquiry"
-                              placeholder="ex. Bookkeeping"
-                              type="text"
-                              id="Inquiry"
-                              required=""
-                            />
-                          </div>
-                          <div
-                            id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cf9b-646ec0ef"
-                          >
-                            <label for="Message">Message</label
-                            ><textarea
-                              id="Message"
-                              name="Message"
-                              maxlength="5000"
-                              data-name="Message"
-                              placeholder="Type your message here..."
-                              required=""
-                              class="text-area medium w-input"
-                            ></textarea>
-                          </div>
-                          <input
-                            type="submit"
-                            data-wait="Please wait..."
-                            id="w-node-_1660dc56-6d2a-18c3-2c5e-2a542123cfa0-646ec0ef"
-                            class="button-primary w-button"
-                            value="Send message"
-                          />
-                        </div>
-                      </form>
-                      <div class="success-message-wrapp w-form-done">
-                        <div class="card thank-you-message">
-                          <div
-                            class="icon-font-rounded success-message-icon large"
-                          >
-                            
-                          </div>
-                          <div class="mg-top-24px">
-                            <div class="text-neutral-800">
-                              <div class="display-5 semi-bold">
-                                Thank you! We'll get back to
-                                <span class="text-no-wrap">you soon</span>
+                    <div class="contact-from-wrapper">
+                      <div class="container-default contact-form-container">
+                        <div data-w-id="dfb82180-30bc-b7e4-fdd1-c32ac0b12eb9" style="opacity: 1;" class="contact-form-block w-form">
+                          <form id="contactForm" class="contact-form" action="https://formsubmit.co/abhiramak963@gmail.com" method="POST">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_subject" value="New Contact Form Submission - Abraham & Kurian">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://abrahamandkurian.com/contact/contact.html?submission=success">
+                            <!-- Honeypot to prevent spam -->
+                            <input type="text" name="_honey" style="display:none">
+                            <!-- Disable captcha -->
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <h3 class="contact-form-title">Contact us</h3>
+                            <div class="form-fields-wrapper">
+                              <div class="form-fields-row">
+                                <input class="form-field w-input" maxlength="256" name="name" placeholder="Your Name" type="text" id="name" required="">
+                                <input class="form-field w-input" maxlength="256" name="email" placeholder="Your Email" type="email" id="email" required="">
+                                <input type="hidden" name="_replyto" id="email-reply">
+                              </div>
+                              <div class="form-fields-row">
+                                <input class="form-field w-input" maxlength="10" minlength="10" name="phone" placeholder="Phone" type="tel" id="phone" required pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                                <input class="form-field w-input" maxlength="256" name="inquiry" placeholder="Inquiry (e.g., GST Services)" type="text" id="inquiry" required="">
+                              </div>
+                              <div class="form-fields-row single-field">
+                                <textarea placeholder="Type your message" maxlength="5000" id="message" name="message" class="form-field message-field w-input"></textarea>
+                              </div>
+                              <div class="form-accent-wrapper">
+                                <label class="w-checkbox accent-checkbox-field">
+                                  <div class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-icon"></div>
+                                  <input type="checkbox" name="privacy-policy-accepted" id="privacy" data-name="Privacy" required="" style="opacity:0;position:absolute;z-index:-1">
+                                  <span class="checkbox-label w-form-label" for="privacy">I agree to the privacy policy</span>
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" class="button-primary w-button">Send message</button>
+                          </form>
+                          <div id="formSuccess" class="success-message-wrapp w-form-done">
+                            <div class="card thank-you-message">
+                              <div class="icon-font-rounded success-message-icon large"></div>
+                              <div class="mg-top-24px">
+                                <div class="text-neutral-800">
+                                  <div class="display-5 semi-bold">
+                                    Thank you! We'll get back to
+                                    <span class="text-no-wrap">you soon</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="mg-top-8px">
+                                <p class="paragraph-medium">
+                                  We have received your message and will get back to
+                                  you as soon as possible. Our team is dedicated to
+                                  providing the best support and we appreciate
+                                  <span class="text-no-wrap">your patience.</span>
+                                </p>
                               </div>
                             </div>
                           </div>
-                          <div class="mg-top-8px">
-                            <p class="paragraph-medium">
-                              We have received your message and will get back to
-                              you as soon as possible. Our team is dedicated to
-                              providing the best support and we appreciate
-                              <span class="text-no-wrap">your patience.</span>
-                            </p>
+                          <div id="formError" class="error-message-wrapper w-form-fail">
+                            <div>Oops! Something went wrong while submitting the form.</div>
                           </div>
-                        </div>
-                      </div>
-                      <div class="error-message-wrapper w-form-fail">
-                        <div>
-                          Oops! Something went wrong while submitting the form.
                         </div>
                       </div>
                     </div>
