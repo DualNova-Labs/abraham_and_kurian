@@ -102,6 +102,11 @@
     padding: 60px 30px !important;
   }
 
+  /* Mobile text will be hidden by default (desktop view) */
+  .mobile-text {
+    display: none;
+  }
+
   @media (max-width: 767px) {
     .services-hero-text-container {
       max-width: 100% !important;
@@ -109,6 +114,25 @@
     }
     .service-card-hero-v2 {
       padding: 40px 20px !important;
+    }
+    
+    /* Show mobile text, hide desktop text on mobile devices */
+    .mobile-text {
+      display: block;
+    }
+    
+    .desktop-text {
+      display: none;
+    }
+    
+    /* Service cards description truncation */
+    .card.service-card .paragraph-large {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 3em;
     }
   }
 </style>
@@ -233,8 +257,11 @@
                   <div class="accent-top-line hero"></div>
                   <h1 class="display-12 text-neutral-100">Our services</h1>
                   <div class="pd-top-8px">
-                    <p class="paragraph-large text-neutral-200">
-                      At Abraham and Kurian, Thiruvalla, we provide a wide range of financial, tax, and advisory services tailored for individuals, businesses, and NRIs. Our expert team offers reliable support in GST, income tax, audits, business setup, and compliance matters. With a client-first approach and deep industry insight, we help simplify complex regulations and ensure complete legal alignment. We combine professional expertise with modern tools to deliver fast, accurate, and transparent results. Whether you're starting a business, managing taxes, or expanding globally, we guide you every step of the way. At Abraham and Kurian, we aim to be more than a service provider — we're your trusted financial partner.
+                    <p class="paragraph-large text-neutral-200 desktop-text">
+                      At Abraham and Kurian, Thiruvalla, we provide a wide range of financial, tax, and advisory services tailored for individuals, businesses, and NRIs. Our expert team offers reliable support in GST, income tax, audits, business setup, and compliance matters. With a client-first approach and deep industry insight, we help simplify complex regulations and ensure complete legal alignment. We combine professional expertise with modern tools to deliver fast, accurate, and transparent results. Whether you're starting a business, managing taxes, or expanding globally, we guide you every step of the way. At Abraham and Kurian, we aim to be more than a service provider, we're your trusted financial partner.
+                    </p>
+                    <p class="paragraph-large text-neutral-200 mobile-text">
+                      At Abraham and Kurian, Thiruvalla, we offer financial, tax, and advisory services tailored for individuals, businesses, and NRIs. Our team provides expert support in GST, income tax, audits, and business setup. With a client-focused approach and modern tools, we ensure fast, accurate, and transparent results. Whether you're starting a business or managing taxes, we're here to guide you every step of the way.
                     </p>
                   </div>
                 </div>
