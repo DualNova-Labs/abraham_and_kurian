@@ -89,6 +89,27 @@
       .w-webflow-badge {
         display: none !important;
       }
+      
+      /* Logo glow effect */
+      .logo-glow {
+        filter: drop-shadow(0 0 8px rgba(110, 231, 183, 0.6));
+        animation: pulse-glow 2s infinite alternate;
+        transition: all 0.3s ease;
+      }
+      
+      @keyframes pulse-glow {
+        0% {
+          filter: drop-shadow(0 0 5px rgba(110, 231, 183, 0.4));
+        }
+        100% {
+          filter: drop-shadow(0 0 15px rgba(110, 231, 183, 0.7));
+        }
+      }
+      
+      /* Add hover effect to increase glow */
+      .logo-link:hover .logo-glow {
+        filter: drop-shadow(0 0 18px rgba(110, 231, 183, 0.9));
+      }
     </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
@@ -128,8 +149,9 @@
                     class="logo-link w-inline-block"
                   >
                     <img
-                      src="images/65b7d5f44d60c7bf9ba93bfa_logo-web-white-accountant-x-webflow-template.svg"
+                      src="images/logopngabrahamand kurian.png"
                       alt="Logo Web White - Accountant X Webflow Template"
+                      class="logo-glow"
                     />
                   </a>
                 </div>
@@ -363,7 +385,7 @@
                                     data-wf-bindings="%5B%7B%22innerHTML%22%3A%7B%22type%22%3A%22CommercePrice%22%2C%22filter%22%3A%7B%22type%22%3A%22price%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%5B%5D.price%22%7D%7D%5D"
                                     class="cart-item-price"
                                   >
-                                    $ 0.00 USD
+                                    $ 0.00 USD
                                   </div>
                                   <script
                                     type="text/x-wf-template"
