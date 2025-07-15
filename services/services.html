@@ -88,53 +88,53 @@
     <style>
       .w-webflow-badge {
         display: none !important;
-  }
+      }
 
-  /* Custom styles for the services hero section */
-  .services-hero-text-container {
-    max-width: 1400px !important;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .service-card-hero-v2 {
-    padding: 60px 30px !important;
-  }
+      /* Custom styles for the services hero section */
+      .services-hero-text-container {
+        max-width: 1400px !important;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-  /* Mobile text will be hidden by default (desktop view) */
-  .mobile-text {
-    display: none;
-  }
+      .service-card-hero-v2 {
+        padding: 60px 30px !important;
+      }
 
-  @media (max-width: 767px) {
-    .services-hero-text-container {
-      max-width: 100% !important;
-      padding: 0 15px;
-    }
-    .service-card-hero-v2 {
-      padding: 40px 20px !important;
-    }
-    
-    /* Show mobile text, hide desktop text on mobile devices */
-    .mobile-text {
-      display: block;
-    }
-    
-    .desktop-text {
-      display: none;
-    }
-    
-    /* Service cards description truncation */
-    .card.service-card .paragraph-large {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-height: 3em;
-    }
-  }
-</style>
+      /* Mobile text will be hidden by default (desktop view) */
+      .mobile-text {
+        display: none;
+      }
+
+      @media (max-width: 767px) {
+        .services-hero-text-container {
+          max-width: 100% !important;
+          padding: 0 15px;
+        }
+        .service-card-hero-v2 {
+          padding: 40px 20px !important;
+        }
+
+        /* Show mobile text, hide desktop text on mobile devices */
+        .mobile-text {
+          display: block;
+        }
+
+        .desktop-text {
+          display: none;
+        }
+
+        /* Service cards description truncation */
+        .card.service-card .paragraph-large {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-height: 3em;
+        }
+      }
+    </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
         currencyCode: "USD",
@@ -176,18 +176,25 @@
               <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
                 <ul role="list" class="list-nav-menu">
                   <li class="link-nav-item">
-                    <a href="../index.html" class="header-nav-link"
-                      >Home</a
+                    <a href="../index.html" class="header-nav-link">Home</a>
+                  </li>
+                  <li class="link-nav-item">
+                    <a href="../aboutus/about.html" class="header-nav-link"
+                      >About</a
                     >
                   </li>
                   <li class="link-nav-item">
-                    <a href="../aboutus/about.html" class="header-nav-link">About</a>
+                    <a
+                      href="services.html"
+                      aria-current="page"
+                      class="header-nav-link w--current"
+                      >Services</a
+                    >
                   </li>
                   <li class="link-nav-item">
-                    <a href="services.html" aria-current="page" class="header-nav-link w--current">Services</a>
-                  </li>
-                  <li class="link-nav-item">
-                    <a href="../careers/careers.html" class="header-nav-link">Careers</a>
+                    <a href="../careers/careers.html" class="header-nav-link"
+                      >Careers</a
+                    >
                   </li>
                   <li class="link-nav-item">
                     <a href="../blog/blog.html" class="header-nav-link">Blog</a>
@@ -204,9 +211,8 @@
                   class="button-primary w-inline-block"
                   ><div>Contact us</div>
                   <div class="item-icon-right">
-                    <div class="base-icon-font"></div>
-                  </div></a
-                >
+                    <div class="base-icon-font"></div></div
+                ></a>
               </div>
               <div class="hamburger-menu w-nav-button">
                 <div class="hamburger-menu-flex">
@@ -257,10 +263,29 @@
                   <h1 class="display-12 text-neutral-100">Our services</h1>
                   <div class="pd-top-8px">
                     <p class="paragraph-large text-neutral-200 desktop-text">
-                      At Abraham and Kurian, Thiruvalla, we provide a wide range of financial, tax, and advisory services tailored for individuals, businesses, and NRIs. Our expert team offers reliable support in GST, income tax, audits, business setup, and compliance matters. With a client-first approach and deep industry insight, we help simplify complex regulations and ensure complete legal alignment. We combine professional expertise with modern tools to deliver fast, accurate, and transparent results. Whether you're starting a business, managing taxes, or expanding globally, we guide you every step of the way. At Abraham and Kurian, we aim to be more than a service provider, we're your trusted financial partner.
+                      At Abraham and Kurian, Thiruvalla, we provide a wide range
+                      of financial, tax, and advisory services tailored for
+                      individuals, businesses, and NRIs. Our expert team offers
+                      reliable support in GST, income tax, audits, business
+                      setup, and compliance matters. With a client-first
+                      approach and deep industry insight, we help simplify
+                      complex regulations and ensure complete legal alignment.
+                      We combine professional expertise with modern tools to
+                      deliver fast, accurate, and transparent results. Whether
+                      you're starting a business, managing taxes, or expanding
+                      globally, we guide you every step of the way. At Abraham
+                      and Kurian, we aim to be more than a service provider,
+                      we're your trusted financial partner.
                     </p>
                     <p class="paragraph-large text-neutral-200 mobile-text">
-                      At Abraham and Kurian, Thiruvalla, we offer financial, tax, and advisory services tailored for individuals, businesses, and NRIs. Our team provides expert support in GST, income tax, audits, and business setup. With a client-focused approach and modern tools, we ensure fast, accurate, and transparent results. Whether you're starting a business or managing taxes, we're here to guide you every step of the way.
+                      At Abraham and Kurian, Thiruvalla, we offer financial,
+                      tax, and advisory services tailored for individuals,
+                      businesses, and NRIs. Our team provides expert support in
+                      GST, income tax, audits, and business setup. With a
+                      client-focused approach and modern tools, we ensure fast,
+                      accurate, and transparent results. Whether you're starting
+                      a business or managing taxes, we're here to guide you
+                      every step of the way.
                     </p>
                   </div>
                 </div>
@@ -329,7 +354,9 @@
                     <h2 class="card-title display-6">GST Services</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Streamline your indirect tax filings with expert GST return support, classification validation, audit assistance, and startup advisory — all under one roof.
+                        Streamline your indirect tax filings with expert GST
+                        return support, classification validation, audit
+                        assistance, and startup advisory — all under one roof.
                       </p>
                     </div>
                   </div></a
@@ -363,7 +390,9 @@
                     <h2 class="card-title display-6">Income Tax Advisory</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Stay tax-compliant with expert guidance on personal and corporate taxes, return filings, TDS, and audits — tailored to your financial goals.
+                        Stay tax-compliant with expert guidance on personal and
+                        corporate taxes, return filings, TDS, and audits —
+                        tailored to your financial goals.
                       </p>
                     </div>
                   </div></a
@@ -397,7 +426,9 @@
                     <h2 class="card-title display-6">Business Incorporation</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Launch your startup or private limited company with full legal support — from ROC registration to PAN, TAN, and licensing compliance.
+                        Launch your startup or private limited company with full
+                        legal support — from ROC registration to PAN, TAN, and
+                        licensing compliance.
                       </p>
                     </div>
                   </div></a
@@ -431,7 +462,9 @@
                     <h2 class="card-title display-6">Accounts Outsourcing</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Delegate your books, payroll, tax filings, and financial reporting to our professional team for stress-free, accurate accounting.
+                        Delegate your books, payroll, tax filings, and financial
+                        reporting to our professional team for stress-free,
+                        accurate accounting.
                       </p>
                     </div>
                   </div></a
@@ -465,7 +498,9 @@
                     <h2 class="card-title display-6">Annual Compliance</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Stay compliant with MCA, Income Tax, and GST regulations — from internal audits to statutory filings, we ensure your records are always in order.
+                        Stay compliant with MCA, Income Tax, and GST regulations
+                        — from internal audits to statutory filings, we ensure
+                        your records are always in order.
                       </p>
                     </div>
                   </div></a
@@ -499,7 +534,9 @@
                     <h2 class="card-title display-6">NRI Advisory</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Manage your Indian tax, investments, property, and FEMA compliance from anywhere in the world with our trusted NRI solutions.
+                        Manage your Indian tax, investments, property, and FEMA
+                        compliance from anywhere in the world with our trusted
+                        NRI solutions.
                       </p>
                     </div>
                   </div></a
@@ -533,13 +570,15 @@
                     <h2 class="card-title display-6">Audit & Assurance</h2>
                     <div class="mg-top-6px">
                       <p class="paragraph-large">
-                        Comprehensive auditing, reporting, and compliance services that protect your business, improve accuracy, and ensure legal alignment.
+                        Comprehensive auditing, reporting, and compliance
+                        services that protect your business, improve accuracy,
+                        and ensure legal alignment.
                       </p>
                     </div>
                   </div></a
                 >
               </div>
-                    </div>
+            </div>
           </div>
         </div>
       </section>
@@ -547,9 +586,13 @@
         <div class="footer-container">
           <div class="footer-logo-row">
             <a href="../index.html" class="footer-logo-link">
-              <img src="../images/logopngabrahamand kurian.png" alt="Accountant X Logo" class="footer-logo-img" />
+              <img
+                src="../images/logopngabrahamand kurian.png"
+                alt="Accountant X Logo"
+                class="footer-logo-img"
+              />
             </a>
-                    </div>
+          </div>
           <nav class="footer-nav">
             <a href="../index.html" class="footer-link">Home</a>
             <a href="../aboutus/about.html" class="footer-link">About</a>
