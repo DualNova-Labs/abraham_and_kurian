@@ -547,6 +547,10 @@
             loading.style.display = 'none';
             if (xhr.status === 200) {
               success.style.display = 'flex';
+              setTimeout(function() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+              }, 3000);
             } else {
               error.style.display = 'block';
               form.style.display = '';
