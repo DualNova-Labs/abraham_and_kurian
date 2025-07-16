@@ -2060,6 +2060,7 @@
   .slider-right-container .secondary-button-icon.large.slider-button-right---center-mbl-v2 {
     top: auto !important;   /* ignore top values set via inset */
     bottom: -60px;          /* push arrows 60px below their default spot */
+    left: 50%;            /* base horizontal reference */
   }
 
   /* Slightly higher on tablets/mobile for better fit */
@@ -2071,6 +2072,13 @@
   }
 
   /* Draw actual arrow glyphs inside the circular icon */
+  .slider-right-container .secondary-button-icon.large.slider-button-left---center-mbl-v2 {
+    transform: translateX(calc(-100% - 12px)); /* move left of centre with 12px gap */
+  }
+  .slider-right-container .secondary-button-icon.large.slider-button-right---center-mbl-v2 {
+    transform: translateX(12px); /* move right of centre with 12px gap */
+  }
+
   .slider-right-container .secondary-button-icon.large.slider-button-left---center-mbl-v2 .icon-font-rounded::before {
     content: '';
     display: block;
