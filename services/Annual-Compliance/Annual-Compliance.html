@@ -44,7 +44,7 @@
     />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link
       href="css/accountanttemplates.webflow.ddd5db72e.css"
@@ -581,6 +581,241 @@
 
         /* Hide BRIX watermark badge */
         .brix-badges-wrapper {display:none !important;}
+
+        /* Enhanced mobile and tablet responsiveness */
+        @media (max-width: 991px) {
+          /* Tablet-specific adjustments */
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 40px 30px;
+          }
+          
+          .inner-container._550px {
+            padding-left: 10px;
+          }
+          
+          .display-12.text-neutral-100 {
+            font-size: 2.8rem;
+          }
+          
+          .subtitle-text {
+            font-size: 1.15rem;
+          }
+          
+          .about-service-container {
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+          
+          /* Improve vertical line visibility on tablet */
+          .vertical-line-decoration.hero.horizontal-line---mbp {
+            height: 70%;
+          }
+          
+          /* Adjust feature grid spacing */
+          .improved-features {
+            gap: 16px;
+          }
+          
+          .improved-features .paragraph-large.extra-bold {
+            font-size: 1.1rem;
+          }
+          
+          /* Ensure logo is properly sized */
+          .logo-wrapper._188px img {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          /* Improve content spacing */
+          .about-service-section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+          
+          .content-text h2 {
+            font-size: 1.7rem;
+          }
+        }
+
+        @media (max-width: 767px) {
+          /* Mobile-specific adjustments */
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 30px 20px;
+          }
+          
+          .display-12.text-neutral-100 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+          }
+          
+          .subtitle-text {
+            font-size: 1.05rem;
+          }
+          
+          /* Remove vertical line on mobile as it doesn't work well */
+          .vertical-line-decoration.hero.horizontal-line---mbp {
+            display: none;
+          }
+          
+          .inner-container._550px {
+            padding-left: 0;
+          }
+          
+          /* Adjust feature list for mobile */
+          .improved-features {
+            gap: 14px;
+          }
+          
+          .improved-features .pricing-feature-wrapper {
+            gap: 12px;
+          }
+          
+          ._28px-icon {
+            width: 24px;
+            height: 24px;
+          }
+          
+          .improved-features .paragraph-large.extra-bold {
+            font-size: 1rem;
+          }
+          
+          /* Adjust content spacing */
+          .about-service-section {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+          
+          .about-service-container {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          
+          .content-text {
+            font-size: 0.95rem;
+          }
+          
+          .content-text h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+          }
+          
+          /* Ensure images don't overflow */
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          /* Adjust navigation for mobile */
+          .w-nav-menu {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          }
+          
+          .list-nav-menu {
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+          }
+          
+          .header-nav-link {
+            padding: 8px 0;
+            display: block;
+          }
+          
+          /* Fix header container on mobile */
+          .header-container-wrapper {
+            padding: 15px 0;
+          }
+          
+          .logo-wrapper._188px {
+            max-width: 160px;
+          }
+          
+          /* Improve minimum height for hero section */
+          .improved-layout .service-single-wrapper {
+            min-height: 380px;
+          }
+          
+          /* Fix rich text content on mobile */
+          .rich-text.w-richtext ul {
+            padding-left: 20px;
+          }
+          
+          .rich-text.w-richtext li {
+            margin-bottom: 12px;
+          }
+        }
+
+        @media (max-width: 479px) {
+          /* Small mobile adjustments */
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 25px 16px;
+          }
+          
+          .display-12.text-neutral-100 {
+            font-size: 1.9rem;
+          }
+          
+          .subtitle-text {
+            font-size: 1rem;
+            line-height: 1.4;
+          }
+          
+          .mg-top-36px {
+            margin-top: 24px;
+          }
+          
+          /* Further adjust feature list */
+          .improved-features {
+            gap: 12px;
+          }
+          
+          ._28px-icon {
+            width: 20px;
+            height: 20px;
+            min-width: 20px; /* Prevent icon shrinking */
+          }
+          
+          .improved-features .paragraph-large.extra-bold {
+            font-size: 0.95rem;
+          }
+          
+          /* Adjust footer for very small screens */
+          .footer-nav {
+            gap: 14px;
+            font-size: 0.9rem;
+          }
+          
+          .footer-logo-img {
+            height: 38px;
+          }
+          
+          /* Ensure minimum tap target sizes */
+          .footer-link {
+            padding: 4px 0;
+          }
+          
+          /* Reduce section padding */
+          .about-service-section {
+            padding-top: 32px;
+            padding-bottom: 32px;
+          }
+          
+          /* Adjust content text */
+          .content-text h2 {
+            font-size: 1.4rem;
+          }
+          
+          .content-text ul li {
+            margin-bottom: 10px;
+          }
+          
+          /* Improve minimum height for hero section */
+          .improved-layout .service-single-wrapper {
+            min-height: 340px;
+          }
+        }
       </style>
     </div>
     <div>

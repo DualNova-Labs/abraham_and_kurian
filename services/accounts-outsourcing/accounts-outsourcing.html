@@ -44,7 +44,7 @@
     />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link
       href="css/accountanttemplates.webflow.ddd5db72e.css"
@@ -773,6 +773,7 @@
           ._28px-icon {
             width: 24px;
             height: 24px;
+            min-width: 24px; /* Prevent icon shrinking */
           }
           
           .footer-container {
@@ -811,6 +812,27 @@
           
           .list-nav-menu {
             gap: 10px;
+          }
+          
+          /* Ensure minimum tap target sizes */
+          .footer-link {
+            padding: 4px 0;
+          }
+          
+          /* Improve minimum height for hero section */
+          .improved-layout .service-single-wrapper {
+            min-height: 340px;
+          }
+          
+          /* Header adjustments for tiny screens */
+          .hamburger-menu {
+            margin-left: 10px;
+          }
+          
+          /* Ensure buttons are properly sized */
+          .button-primary {
+            padding: 10px 16px;
+            font-size: 0.9rem;
           }
         }
       </style>
