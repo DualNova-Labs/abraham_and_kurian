@@ -183,35 +183,12 @@
           </div>
         </div>
       </div>
-              <div class="buttons-row nav-menu-hidden-on-mobile">
-                <a
-                  id="w-node-e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c-36bfab9c"
-                  data-w-id="e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c"
-                  href="../../contact/contact.html"
-                  class="button-primary w-inline-block"
-                  ><div>Contact us</div>
-                  <div class="item-icon-right">
-                    <div class="base-icon-font"></div>
-                  </div></a
-                >
-              </div>
-              <div class="hamburger-menu w-nav-button">
-                <div class="hamburger-menu-flex">
-                  <div class="hamburger-menu-line top"></div>
-                  <div class="hamburger-menu-line middle"></div>
-                  <div class="hamburger-menu-line bottom"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <section class="section hero v16">
         <div
           class="w-layout-blockcontainer container-default z-index-1 w-container"
         >
           <div class="card-section-dark-mode service-single-card"></div>
-          <div class="card-section-dark-mode service-single">
+          <div class="card-section-dark-mode service-single improved-layout">
             <div class="w-layout-grid grid-2-columns service-single-wrapper">
               <div
                 id="w-node-a070ef32-5283-47b0-7b59-f91b8c94f83e-6b8c3945"
@@ -242,11 +219,11 @@
                       <p class="paragraph-large text-neutral-200 subtitle-text">
                         Professional accounts outsourcing services tailored for businesses seeking expert financial management.
                       </p>
-                      <div class="mg-top-32px">
-                        <div class="w-layout-grid grid-1-column feature-grid">
+                      <div class="mg-top-36px">
+                        <div class="w-layout-grid grid-1-column feature-grid improved-features">
                           <div
                             id="w-node-a070ef32-5283-47b0-7b59-f91b8c94f84a-6b8c3945"
-                            class="pricing-feature-wrapper gap-column-16px"
+                            class="pricing-feature-wrapper gap-column-20px"
                           >
                             <img
                               src="images/65baaf5deeb69d3651163013_check-green-icon-accountant-x-webflow-template.svg"
@@ -261,7 +238,7 @@
                           </div>
                           <div
                             id="w-node-a070ef32-5283-47b0-7b59-f91b8c94f84d-6b8c3945"
-                            class="pricing-feature-wrapper gap-column-16px"
+                            class="pricing-feature-wrapper gap-column-20px"
                           >
                             <img
                               src="images/65baaf5deeb69d3651163013_check-green-icon-accountant-x-webflow-template.svg"
@@ -276,7 +253,7 @@
                           </div>
                           <div
                             id="w-node-a070ef32-5283-47b0-7b59-f91b8c94f850-6b8c3945"
-                            class="pricing-feature-wrapper gap-column-16px"
+                            class="pricing-feature-wrapper gap-column-20px"
                           >
                             <img
                               src="images/65baaf5deeb69d3651163013_check-green-icon-accountant-x-webflow-template.svg"
@@ -291,7 +268,7 @@
                           </div>
                           <div
                             id="w-node-feature-item-4"
-                            class="pricing-feature-wrapper gap-column-16px"
+                            class="pricing-feature-wrapper gap-column-20px"
                           >
                             <img
                               src="images/65baaf5deeb69d3651163013_check-green-icon-accountant-x-webflow-template.svg"
@@ -456,6 +433,10 @@
           gap: 16px;
         }
         
+        .gap-column-20px {
+          gap: 20px;
+        }
+        
         ._28px-icon {
           width: 28px;
           height: 28px;
@@ -501,6 +482,49 @@
           padding: 40px 30px;
         }
         
+        .card-section-dark-mode.service-single.improved-layout {
+          padding: 50px 40px;
+        }
+        
+        /* --- Black card content enhancements --- */
+        .improved-layout .inner-container._550px {
+          max-width: 700px;          /* keep text area readable */
+        }
+
+        /* Responsive two-column grid for feature list */
+        .improved-layout .feature-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 24px 32px;            /* row gap 24, column gap 32 */
+        }
+
+        .improved-layout .pricing-feature-wrapper {
+          gap: 12px;                 /* gap between icon and text */
+        }
+
+        /* Ensure long headings wrap nicely */
+        .improved-layout .display-12.text-neutral-100 {
+          line-height: 1.15;
+          word-break: break-word;
+        }
+        
+        .improved-features {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+        
+        .improved-features .pricing-feature-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+        }
+        
+        .improved-features .paragraph-large.extra-bold {
+          font-weight: 600;
+          font-size: 1.15rem;
+        }
+        
         .display-12.text-neutral-100 {
           font-size: 3.2rem;
           line-height: 1.1;
@@ -530,11 +554,22 @@
         .about-service-section {
           padding-top: 60px;
           padding-bottom: 60px;
+          width: 100%;
         }
         
         .about-service-container {
-          max-width: 800px;
-          margin: 0 auto;
+          max-width: none;
+          width: 100%;
+          margin: 0;
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        
+        @media (min-width: 1024px) {
+          .about-service-container {
+            padding-left: 40px;
+            padding-right: 40px;
+          }
         }
         
         @media (max-width: 767px) {
@@ -569,6 +604,13 @@
           .display-12.text-neutral-100 {
             font-size: 2.6rem;
           }
+          .improved-layout .inner-container._550px {
+            max-width: 100%;
+            padding-left: 0;
+          }
+          .improved-layout .feature-grid {
+            grid-template-columns: 1fr; /* single column on mobile */
+          }
         }
         
         @media (max-width: 600px) {
@@ -583,6 +625,22 @@
           .footer-logo-img {
             height: 42px;
           }
+        }
+
+        /* Center content vertically inside hero grid */
+        .improved-layout .service-single-wrapper {
+          align-items: center;
+          min-height: 450px; /* ensures reasonable height without huge empty space */
+        }
+
+        /* Increase row gap slightly for balanced bottom fill */
+        .improved-layout .feature-grid {
+          row-gap: 28px;
+        }
+
+        /* Hide duplicate floating contact button */
+        .page-wrapper > .buttons-row.nav-menu-hidden-on-mobile {
+          display: none !important;
         }
       </style>
     </div>
