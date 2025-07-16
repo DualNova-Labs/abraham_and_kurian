@@ -299,7 +299,7 @@
                 "
               >
                 <div class="display-12 bold text-neutral-100">
-                  5<span class="text-color-primary-1">K</span>
+                  1K<span class="text-color-primary-1">+</span>
                 </div>
                 <div class="mg-top-6px">
                   <div class="paragraph-large text-neutral-300">
@@ -322,7 +322,7 @@
                 "
               >
                 <div class="display-12 bold text-neutral-100">
-                  35<span class="text-color-primary-1">+</span>
+                  25<span class="text-color-primary-1"></span>
                 </div>
                 <div class="mg-top-6px">
                   <div class="paragraph-large text-neutral-300">
@@ -344,15 +344,6 @@
                   opacity: 0;
                 "
               >
-                <div class="display-12 bold text-neutral-100">
-                  97<span class="text-color-primary-1">%</span>
-                </div>
-                <div class="mg-top-6px">
-                  <div class="paragraph-large text-neutral-300">
-                    Customer satisfaction
-                  </div>
-                </div>
-              </div>
               <div
                 data-w-id="a8ba0bb4-6ade-9b41-a201-8feb9ba356cc"
                 style="
@@ -368,7 +359,7 @@
                 "
               >
                 <div class="display-12 bold text-neutral-100">
-                  30<span class="text-color-primary-1">Y</span>
+                  31<span class="text-color-primary-1">Y</span>
                 </div>
                 <div class="mg-top-6px">
                   <div class="paragraph-large text-neutral-300">
@@ -1469,6 +1460,58 @@
         font-size: 13px;
       }
     }
+    </style>
+    <style>
+      /* Center the stats section horizontally and vertically */
+      .stats-grid-4-col {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0 !important;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .stats-grid-4-col > div {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 200px;
+        margin: 0 10px;
+      }
+      .stats-grid-4-col .display-12 {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        font-size: 64px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .stats-grid-4-col .text-color-primary-1 {
+        color: #22c55e !important;
+        font-size: 64px;
+        font-weight: 700;
+        margin-left: 4px;
+      }
+      .stats-grid-4-col .paragraph-large {
+        color: #e5e7eb;
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 18px;
+        text-align: center;
+      }
+      @media (max-width: 991px) {
+        .stats-grid-4-col {
+          flex-direction: column !important;
+          gap: 30px !important;
+        }
+        .stats-grid-4-col > div {
+          min-width: 0;
+          margin: 0;
+        }
+      }
     </style>
   </body>
 </html>
