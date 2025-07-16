@@ -2069,6 +2069,27 @@
       bottom: -40px;
     }
   }
+
+  /* Draw actual arrow glyphs inside the circular icon */
+  .slider-right-container .secondary-button-icon.large.slider-button-left---center-mbl-v2 .icon-font-rounded::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid currentColor; /* chevron pointing left */
+  }
+  .slider-right-container .secondary-button-icon.large.slider-button-right---center-mbl-v2 .icon-font-rounded::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid currentColor; /* chevron pointing right */
+  }
+
 </style>
     </div>
     <script
