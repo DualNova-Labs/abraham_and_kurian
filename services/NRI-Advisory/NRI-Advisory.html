@@ -44,7 +44,7 @@
     />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link
       href="css/accountanttemplates.webflow.ddd5db72e.css"
@@ -347,6 +347,17 @@
           text-align: center;
         }
         
+        /* Global responsive fixes */
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+        
+        .w-container {
+          max-width: 100%;
+          box-sizing: border-box;
+        }
+        
         /* New styles for improved layout */
         .subtitle-text {
           font-size: 1.2rem;
@@ -495,13 +506,62 @@
           padding-right: 16px;
         }
         
-        @media (min-width: 1024px) {
-          .about-service-container {
-            padding-left: 40px;
-            padding-right: 40px;
+        /* Center content vertically inside hero grid */
+        .improved-layout .service-single-wrapper {
+          align-items: center;
+          min-height: 450px; /* ensures reasonable height without huge empty space */
+        }
+
+        /* Increase row gap slightly for balanced bottom fill */
+        .improved-layout .feature-grid {
+          row-gap: 28px;
+        }
+
+        /* Hide duplicate floating contact button */
+        .page-wrapper > .buttons-row.nav-menu-hidden-on-mobile {
+          display: none !important;
+        }
+
+        /* Hide BRIX watermark badge */
+        .brix-badges-wrapper {display:none !important;}
+        
+        /* Enhanced Responsive Styles */
+        
+        /* Tablet Styles (768px - 1023px) */
+        @media (max-width: 1023px) {
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 40px 30px;
+          }
+          
+          .section.hero.v16 {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+          
+          .display-12.text-neutral-100 {
+            font-size: 2.8rem;
+          }
+          
+          .improved-features .paragraph-large.extra-bold {
+            font-size: 1.1rem;
+          }
+          
+          .about-service-section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+          
+          .w-layout-blockcontainer.container-default.w-container {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          
+          .improved-layout .service-single-wrapper {
+            min-height: 400px;
           }
         }
         
+        /* Mobile Styles (767px and below) */
         @media (max-width: 767px) {
           .grid-2-columns.service-single-wrapper {
             grid-template-columns: 1fr;
@@ -534,47 +594,238 @@
           .display-12.text-neutral-100 {
             font-size: 2.6rem;
           }
+          
           .improved-layout .inner-container._550px {
             max-width: 100%;
             padding-left: 0;
           }
+          
           .improved-layout .feature-grid {
             grid-template-columns: 1fr; /* single column on mobile */
           }
+          
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 30px 20px;
+          }
+          
+          .section.hero.v16 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+          
+          .vertical-line-decoration.hero.horizontal-line---mbp {
+            display: none; /* Hide vertical line on mobile for cleaner layout */
+          }
+          
+          .mg-top-36px {
+            margin-top: 24px;
+          }
+          
+          .improved-features {
+            gap: 16px;
+          }
+          
+          .improved-features .pricing-feature-wrapper {
+            gap: 14px;
+          }
+          
+          ._28px-icon {
+            width: 24px;
+            height: 24px;
+          }
+          
+          .about-service-section {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+          
+          .about-service-container {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+          
+          .w-layout-blockcontainer.container-default.w-container {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          
+          .improved-layout .service-single-wrapper {
+            min-height: 350px;
+          }
+          
+          /* Fix navigation menu on mobile */
+          .w-nav-menu {
+            background-color: #fff;
+            padding: 20px;
+          }
+          
+          .list-nav-menu {
+            gap: 10px;
+          }
+          
+          /* Enhanced mobile navigation */
+          @media screen and (max-width: 767px) {
+            .nav-menu-wrapper {
+              background-color: #fff;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+              border-radius: 4px;
+            }
+            
+            .list-nav-menu {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+            }
+            
+            .link-nav-item {
+              width: 100%;
+              text-align: center;
+            }
+            
+            .header-nav-link {
+              display: block;
+              padding: 10px 0;
+              font-size: 16px;
+            }
+            
+            .hamburger-menu {
+              z-index: 999;
+            }
+            
+            .header-container-wrapper {
+              padding: 15px 0;
+            }
+          }
         }
         
-        @media (max-width: 600px) {
-          .footer-container {
-            padding: 0 16px;
-            gap: 24px;
+        /* Small Mobile Styles (480px and below) */
+        @media (max-width: 480px) {
+          .display-12.text-neutral-100 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
           }
+          
+          .subtitle-text {
+            font-size: 1rem;
+          }
+          
+          .improved-features .paragraph-large.extra-bold {
+            font-size: 1rem;
+          }
+          
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 25px 16px;
+          }
+          
+          .section.hero.v16 {
+            padding-top: 25px;
+            padding-bottom: 25px;
+          }
+          
           .footer-nav {
-            gap: 18px;
-            font-size: 0.98rem;
+            gap: 16px;
+            flex-direction: column;
+            align-items: center;
           }
+          
+          .about-service-container {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          
+          .content-text ul li {
+            margin-bottom: 16px;
+          }
+          
+          .w-layout-blockcontainer.container-default.w-container {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+          
+          /* Ensure logo is properly sized on very small screens */
+          .logo-wrapper._188px img {
+            max-width: 160px;
+          }
+          
+          /* Rich text content improvements for mobile */
+          .rich-text.w-richtext {
+            font-size: 0.95rem;
+          }
+          
+          .rich-text.w-richtext h2 {
+            font-size: 1.5rem;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+          }
+          
+          .rich-text.w-richtext strong {
+            font-size: 1.1rem;
+            display: block;
+            margin-top: 1.2em;
+            margin-bottom: 0.5em;
+          }
+          
+          .rich-text.w-richtext ul {
+            padding-left: 1.2em;
+          }
+          
+          .rich-text.w-richtext li {
+            margin-bottom: 1em;
+          }
+        }
+        
+        /* Extra Small Mobile Styles (360px and below) */
+        @media (max-width: 360px) {
+          .display-12.text-neutral-100 {
+            font-size: 1.9rem;
+          }
+          
+          .card-section-dark-mode.service-single.improved-layout {
+            padding: 20px 14px;
+          }
+          
+          .improved-features .paragraph-large.extra-bold {
+            font-size: 0.95rem;
+          }
+          
+          ._28px-icon {
+            width: 20px;
+            height: 20px;
+          }
+          
+          .logo-wrapper._188px img {
+            max-width: 140px;
+          }
+          
           .footer-logo-img {
-            height: 42px;
+            height: 40px;
           }
         }
-
-        /* Center content vertically inside hero grid */
-        .improved-layout .service-single-wrapper {
-          align-items: center;
-          min-height: 450px; /* ensures reasonable height without huge empty space */
+        
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+          /* Increase tap target sizes for mobile */
+          .footer-link, 
+          .header-nav-link,
+          .button-primary {
+            padding: 12px 16px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          /* Add more space between interactive elements */
+          .pricing-feature-wrapper {
+            padding: 12px 0;
+          }
+          
+          /* Ensure proper scrolling behavior */
+          html, body {
+            -webkit-overflow-scrolling: touch;
+          }
         }
-
-        /* Increase row gap slightly for balanced bottom fill */
-        .improved-layout .feature-grid {
-          row-gap: 28px;
-        }
-
-        /* Hide duplicate floating contact button */
-        .page-wrapper > .buttons-row.nav-menu-hidden-on-mobile {
-          display: none !important;
-        }
-
-        /* Hide BRIX watermark badge */
-        .brix-badges-wrapper {display:none !important;}
       </style>
     </div>
     <div>
