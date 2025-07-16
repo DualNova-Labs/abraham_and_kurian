@@ -534,6 +534,23 @@
 
         // AJAX form submit with loading and success modal
         form.addEventListener('submit', function(e) {
+          // Phone validation: only 10 digits
+          var phoneInput = document.getElementById('phone-careers');
+          var phoneValue = phoneInput.value.trim();
+          if (!/^\d{10}$/.test(phoneValue)) {
+            alert('Please enter a valid 10-digit phone number (numbers only).');
+            phoneInput.focus();
+            e.preventDefault();
+            return;
+          }
+          // Privacy policy validation
+          var privacyCheckbox = document.getElementById('privacy-careers');
+          if (!privacyCheckbox.checked) {
+            alert('You must agree to the privacy policy to submit your application.');
+            privacyCheckbox.focus();
+            e.preventDefault();
+            return;
+          }
           e.preventDefault();
           loading.style.display = 'flex';
           form.style.display = 'none';
