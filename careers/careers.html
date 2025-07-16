@@ -405,7 +405,7 @@
               <form id="contactFormCareers" class="contact-form" action="https://formsubmit.co/abhiramak963@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_subject" value="New Career Application - Abraham & Kurian">
                 <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://abrahamandkurian.com/contact/contact.html?submission=success">
+                <input type="hidden" name="_next" value="">
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_captcha" value="false">
                 <h3 class="contact-form-title">Apply for Position</h3>
@@ -488,6 +488,7 @@
         var loading = document.getElementById('formLoadingCareers');
         var success = document.getElementById('formSuccessCareers');
         var error = document.getElementById('formErrorCareers');
+
         // Open modal on any Apply Now click
         applyBtns.forEach(function(btn) {
           btn.addEventListener('click', function(e) {
@@ -504,11 +505,13 @@
             document.body.style.overflow = 'hidden';
           });
         });
+
         // Close modal on close button
         closeBtn.addEventListener('click', function() {
           modal.style.display = 'none';
           document.body.style.overflow = '';
         });
+
         // Close modal on outside click
         modal.addEventListener('click', function(e) {
           if (e.target === modal) {
@@ -516,6 +519,7 @@
             document.body.style.overflow = '';
           }
         });
+
         // File size validation
         var resumeInput = document.getElementById('resume-careers');
         resumeInput.addEventListener('change', function() {
@@ -527,29 +531,33 @@
             }
           }
         });
-        // Form submit with loading and success modal
+
+        // AJAX form submit with loading and success modal
         form.addEventListener('submit', function(e) {
+          e.preventDefault();
           loading.style.display = 'flex';
           form.style.display = 'none';
           success.style.display = 'none';
           error.style.display = 'none';
-        });
-        // Listen for formsubmit.co redirect (success)
-        window.addEventListener('pageshow', function(event) {
-          if (window.location.search.includes('submission=success')) {
-            // Show modal if not already open
-            modal.style.display = 'flex';
+
+          var formData = new FormData(form);
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', form.action, true);
+          xhr.onload = function() {
             loading.style.display = 'none';
-            form.style.display = 'none';
-            success.style.display = 'flex';
-            error.style.display = 'none';
-            document.body.style.overflow = 'hidden';
-            // Remove query param so it doesn't show again on reload
-            if (window.history.replaceState) {
-              var url = window.location.href.split('?')[0];
-              window.history.replaceState({}, document.title, url);
+            if (xhr.status === 200) {
+              success.style.display = 'flex';
+            } else {
+              error.style.display = 'block';
+              form.style.display = '';
             }
-          }
+          };
+          xhr.onerror = function() {
+            loading.style.display = 'none';
+            error.style.display = 'block';
+            form.style.display = '';
+          };
+          xhr.send(formData);
         });
       });
     </script>
