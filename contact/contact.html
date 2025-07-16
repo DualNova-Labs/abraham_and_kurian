@@ -426,6 +426,18 @@
                             </div>
                             <button type="submit" class="button-primary w-button">Send message</button>
                           </form>
+                          <div id="customSuccessMessage" class="success-message-wrapp w-form-done" style="display:none;">
+                            <div class="card thank-you-message">
+                              <div class="icon-font-rounded success-message-icon large"></div>
+                              <div class="mg-top-24px">
+                                <div class="text-neutral-800">
+                                  <div class="display-5 semi-bold">
+                                    Thank you for contacting.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                           <div id="formSuccess" class="success-message-wrapp w-form-done">
                             <div class="card thank-you-message">
                               <div class="icon-font-rounded success-message-icon large"></div>
@@ -935,6 +947,25 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/webflow.b2af9cb86.js" type="text/javascript"></script>
+    <script>
+      // Show custom success message if redirected with ?submission=success
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('submission') === 'success') {
+          // Hide form and error message
+          var formBlock = document.querySelector('.contact-form-block');
+          var form = document.getElementById('contactForm');
+          var error = document.getElementById('formError');
+          var defaultSuccess = document.getElementById('formSuccess');
+          if (form) form.style.display = 'none';
+          if (error) error.style.display = 'none';
+          if (defaultSuccess) defaultSuccess.style.display = 'none';
+          // Show custom message
+          var customSuccess = document.getElementById('customSuccessMessage');
+          if (customSuccess) customSuccess.style.display = 'block';
+        }
+      })();
+    </script>
     <style>
       .minimal-footer {
         background: #ffffff;
