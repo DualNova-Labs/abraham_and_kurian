@@ -6814,6 +6814,17 @@ figcaption {
   line-height: 1.667em;
 }
 
+/* Keep paragraph aligned flush under main heading */
+.display-12 + .paragraph-large,
+.display-12 + div .paragraph-large {
+  margin-left: 0;
+}
+
+/* Reduce horizontal gap between heading and paragraph in About Us hero section */
+.grid-2-columns.hero-v8 {
+  grid-column-gap: 16px; /* was 40px */
+}
+
 .paragraph-medium {
   margin-bottom: 0;
   font-size: 16px;
