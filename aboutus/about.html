@@ -496,7 +496,11 @@
               <div class="logo-wrapper _188px">
                 <a href="../index.html" class="logo-link w-inline-block"
                   ><img
+<<<<<<< HEAD
+                    src="images/orange2.png"
+=======
                     src="../images/main_logo.png"
+>>>>>>> fd157d7b08e30e51b982b1fc618234f549cbe7d4
                     alt="Logo Web - Accountant X Webflow Template"
                     class="logo-glow"
                 /></a>
@@ -1483,7 +1487,7 @@
         <div class="footer-container">
           <div class="footer-logo-row">
             <a href="../index.html" class="footer-logo-link">
-              <img src="../images/logopngabrahamand kurian.png" alt="Accountant X Logo" class="footer-logo-img" />
+              <img src="../images/orange2.png" alt="Accountant X Logo" class="footer-logo-img" />
             </a>
                     </div>
           <nav class="footer-nav">
@@ -1633,7 +1637,7 @@
     /* Styles for TECHNOLOGY & TOOLS Section */
     .tools-cards-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 30px;
       justify-content: center;
       margin-top: 20px;
@@ -1644,12 +1648,12 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       padding: 40px 30px;
-      width: 100%;
-      max-width: 420px;
+      flex: 1;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .tools-card:hover {
@@ -1663,6 +1667,7 @@
       margin-bottom: 25px;
       text-align: center;
       color: #333;
+      width: 100%;
     }
 
     .tools-tags-container {
@@ -1671,6 +1676,7 @@
       gap: 12px;
       justify-content: center;
       width: 100%;
+      text-align: center;
     }
 
     .tool-tag {
@@ -1693,11 +1699,12 @@
     @media (max-width: 991px) {
       .tools-cards-container {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
       }
       
       .tools-card {
-        max-width: 100%;
+        width: 100%;
+        min-height: 240px;
       }
     }
 
