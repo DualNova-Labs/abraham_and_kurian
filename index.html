@@ -1815,9 +1815,556 @@
           .header-container-wrapper {
             padding: 16px 0;
           }
+          
+          /* Mobile Navigation Improvements */
+          .nav-menu-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+          }
+          
+          .header-nav-link {
+            padding: 12px 0;
+            font-size: 1.1rem;
+          }
+          
+          /* Mobile Image Optimization */
+          .full-width-image-right img,
+          ._w-h-100 {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+          
+          /* Mobile Touch Targets */
+          .button-primary,
+          .secondary-button {
+            min-height: 44px;
+            touch-action: manipulation;
+          }
+          
+          /* Mobile Text Optimization */
+          .text-neutral-100,
+          .text-neutral-200 {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+          }
         }
         
-        @media (max-width: 479px) {
+        /* Extra Large Mobile Phones (iPhone 14 Pro Max, Galaxy S23 Ultra, etc.) */
+        @media (max-width: 430px) and (min-width: 415px) {
+          .container-default {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          
+          .display-12 {
+            font-size: 2.1rem;
+            line-height: 1.1;
+          }
+          
+          .display-10 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 1.05rem;
+            line-height: 1.5;
+          }
+          
+          .button-primary,
+          .secondary-button {
+            padding: 16px 28px;
+            font-size: 1rem;
+            min-height: 48px;
+          }
+          
+          .logo-wrapper {
+            max-width: 140px;
+          }
+          
+          .hero {
+            padding-top: 20px;
+            padding-bottom: 40px;
+          }
+          
+          .section.hero.v2 {
+            padding-top: 10px;
+          }
+          
+          .section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+          
+          .mg-top-24px,
+          .mg-top-26px {
+            margin-top: 20px;
+          }
+          
+          .pd-bottom-200px {
+            padding-bottom: 75px;
+          }
+          
+          .grid-2-columns,
+          .grid-3-columns {
+            gap: 26px;
+          }
+          
+          .buttons-row {
+            gap: 22px;
+          }
+          
+          /* Specific optimizations for large mobile screens */
+          .inner-container._440px,
+          .inner-container._536px,
+          .inner-container._700px,
+          .inner-container._844px {
+            max-width: 100%;
+            padding: 0 10px;
+          }
+          
+          .full-width-image-right img {
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+          }
+          
+          .header-nav-link {
+            padding: 14px 0;
+            font-size: 1.15rem;
+          }
+          
+          /* iPhone 14 Pro Max Specific Layout for Trusted Experts Section */
+          .trusted-experts-grid {
+            display: block !important;
+            width: 100%;
+          }
+          
+          .trusted-experts-content-left,
+          .trusted-experts-content-right {
+            display: block !important;
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          
+          .trusted-experts-content-left {
+            order: 1;
+          }
+          
+          .trusted-experts-content-right {
+            order: 2;
+          }
+          
+          /* Image positioning for iPhone 14 Pro Max */
+          .image-wrapper.border-radius-24px {
+            width: 100% !important;
+            max-width: 380px !important;
+            margin: 15px auto !important;
+            display: block !important;
+            height: 180px !important;
+            overflow: hidden;
+            border-radius: 12px !important;
+          }
+          
+          .image-wrapper.border-radius-24px img {
+            width: 100% !important;
+            height: 180px !important;
+            object-fit: cover !important;
+            border-radius: 12px !important;
+          }
+          
+          /* Text content spacing */
+          .inner-container._550px._100-mbl {
+            width: 100% !important;
+            max-width: 380px !important;
+            margin: 0 auto 20px auto !important;
+            padding: 0 10px !important;
+          }
+          
+          .mg-top-64px {
+            margin-top: 30px !important;
+          }
+        }
+        
+        /* Large Screen Phones - Comprehensive Fix (430px to 756px) */
+        @media screen and (min-width: 430px) and (max-width: 756px) {
+          /* Container optimizations for large phones */
+          .container-default {
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+          
+          /* Trusted Experts Section - Large Phone Layout */
+          .section.pd-bottom-200px .mg-top-64px .trusted-experts-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 30px !important;
+            align-items: center !important;
+          }
+          
+          .section.pd-bottom-200px .trusted-experts-content-left,
+          .section.pd-bottom-200px .trusted-experts-content-right {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            max-width: 500px !important;
+            margin: 0 auto !important;
+            align-items: center !important;
+          }
+          
+          /* Image sizing for large phones (430px to 756px) */
+          .section.pd-bottom-200px .image-wrapper.border-radius-24px {
+            width: 100% !important;
+            max-width: 450px !important;
+            height: 250px !important;
+            margin: 15px auto !important;
+            display: block !important;
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+          }
+          
+          .section.pd-bottom-200px .image-wrapper.border-radius-24px .image {
+            width: 100% !important;
+            height: 250px !important;
+            object-fit: cover !important;
+            border-radius: 16px !important;
+            transition: transform 0.3s ease !important;
+          }
+          
+          /* Text content for large phones */
+          .section.pd-bottom-200px .inner-container._550px._100-mbl {
+            width: 100% !important;
+            max-width: 450px !important;
+            margin: 0 auto 20px auto !important;
+            padding: 0 20px !important;
+            text-align: center !important;
+          }
+          
+          .section.pd-bottom-200px .inner-container._550px._100-mbl .paragraph-large {
+            font-size: 1.1rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 16px !important;
+            color: #4a5568 !important;
+          }
+          
+          /* Typography adjustments for large phones */
+          .display-10 {
+            font-size: 2rem !important;
+            line-height: 1.2 !important;
+            text-align: center !important;
+          }
+          
+          .mg-top-64px {
+            margin-top: 40px !important;
+          }
+        }
+        
+        /* iPhone 14 Pro Max ONLY - Ultra Specific Fix */
+        @media screen and (max-width: 430px) and (min-width: 428px) {
+          /* Force override all existing styles for iPhone 14 Pro Max ONLY */
+          .section.pd-bottom-200px .container-default .mg-top-64px .trusted-experts-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 20px !important;
+          }
+          
+          .section.pd-bottom-200px .trusted-experts-content-left,
+          .section.pd-bottom-200px .trusted-experts-content-right {
+            display: flex !important;
+            flex-direction: column !important;
+            width: 100% !important;
+            margin: 0 auto 20px auto !important;
+            max-width: 390px !important;
+          }
+          
+          /* Ultra specific image targeting for iPhone 14 Pro Max */
+          .section.pd-bottom-200px .image-wrapper.border-radius-24px {
+            width: 100% !important;
+            max-width: 390px !important;
+            height: 200px !important;
+            margin: 10px auto !important;
+            display: block !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+          }
+          
+          .section.pd-bottom-200px .image-wrapper.border-radius-24px .image {
+            width: 100% !important;
+            height: 200px !important;
+            object-fit: cover !important;
+            border-radius: 12px !important;
+          }
+          
+          /* Ultra specific text targeting for iPhone 14 Pro Max */
+          .section.pd-bottom-200px .inner-container._550px._100-mbl {
+            width: 100% !important;
+            max-width: 390px !important;
+            margin: 0 auto 15px auto !important;
+            padding: 0 15px !important;
+          }
+          
+          .section.pd-bottom-200px .inner-container._550px._100-mbl .paragraph-large {
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+            margin-bottom: 15px !important;
+          }
+        }
+        
+        /* iPhone 14 Pro Max Specific (exact width) */
+        @media (max-width: 430px) {
+          .container-default {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          
+          .display-12 {
+            font-size: 2.1rem;
+            line-height: 1.1;
+          }
+          
+          .display-10 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 1.05rem;
+            line-height: 1.5;
+          }
+          
+          .button-primary,
+          .secondary-button {
+            padding: 16px 28px;
+            font-size: 1rem;
+            min-height: 48px;
+          }
+          
+          .logo-wrapper {
+            max-width: 140px;
+          }
+          
+          .hero {
+            padding-top: 20px;
+            padding-bottom: 40px;
+          }
+          
+          .section.hero.v2 {
+            padding-top: 10px;
+          }
+          
+          .section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+          
+          .mg-top-24px,
+          .mg-top-26px {
+            margin-top: 20px;
+          }
+          
+          .pd-bottom-200px {
+            padding-bottom: 75px;
+          }
+          
+          .grid-2-columns,
+          .grid-3-columns {
+            gap: 26px;
+          }
+          
+          .buttons-row {
+            gap: 22px;
+          }
+          
+          /* Specific optimizations for large mobile screens */
+          .inner-container._440px,
+          .inner-container._536px,
+          .inner-container._700px,
+          .inner-container._844px {
+            max-width: 100%;
+            padding: 0 10px;
+          }
+          
+          .full-width-image-right img {
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+          }
+          
+          .header-nav-link {
+            padding: 14px 0;
+            font-size: 1.15rem;
+          }
+          
+          /* Content Section Optimizations for iPhone 14 Pro Max */
+          .trusted-experts-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+          }
+          
+          .trusted-experts-content-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            order: 1;
+          }
+          
+          .trusted-experts-content-right {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            order: 2;
+          }
+          
+          .image-wrapper {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+          }
+          
+          .image-wrapper img,
+          .image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px;
+            display: block;
+          }
+          
+          .mg-top-64px {
+            margin-top: 35px;
+          }
+          
+          .border-radius-24px {
+            border-radius: 16px;
+            overflow: hidden;
+          }
+          
+          ._100-mbl,
+          .inner-container._550px._100-mbl {
+            width: 100% !important;
+            max-width: 380px !important;
+            margin: 0 auto 15px auto !important;
+            padding: 0 8px !important;
+          }
+          
+          /* Force proper layout for iPhone 14 Pro Max */
+          .w-layout-grid.grid-2-columns.trusted-experts-grid {
+            display: block !important;
+            grid-template-columns: none !important;
+          }
+          
+          .w-layout-grid.grid-1-column.trusted-experts-content-left,
+          .w-layout-grid.grid-1-column.trusted-experts-content-right {
+            display: block !important;
+            grid-template-columns: none !important;
+            margin-bottom: 25px !important;
+          }
+          
+          /* Specific image fixes */
+          #w-node-bf40d169-32d9-ad65-5115-3d42098e7e0e-6b8c3950,
+          #w-node-dd141417-d0d4-219e-17c4-7f08f12f79ad-6b8c3950 {
+            width: 100% !important;
+            max-width: 380px !important;
+            height: 180px !important;
+            margin: 15px auto !important;
+            display: block !important;
+          }
+          
+          /* Text content fixes */
+          #w-node-bf40d169-32d9-ad65-5115-3d42098e7e10-6b8c3950,
+          #w-node-dd141417-d0d4-219e-17c4-7f08f12f79b1-6b8c3950 {
+            width: 100% !important;
+            max-width: 380px !important;
+            margin: 0 auto 20px auto !important;
+            padding: 0 8px !important;
+          }
+          
+          /* Specific mobile layout for trusted experts section */
+          .grid-1-column.trusted-experts-content-left,
+          .grid-1-column.trusted-experts-content-right {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+          }
+          
+          /* Ensure proper spacing between elements */
+          .trusted-experts-content-left .image-wrapper {
+            margin-bottom: 15px;
+          }
+          
+          .trusted-experts-content-right .image-wrapper {
+            margin-top: 15px;
+          }
+        }
+        
+        /* Large Mobile Phones (iPhone 6/7/8 Plus, etc.) */
+        @media (max-width: 414px) {
+          .container-default {
+            padding-left: 18px;
+            padding-right: 18px;
+          }
+          
+          .display-12 {
+            font-size: 1.9rem;
+            line-height: 1.1;
+          }
+          
+          .display-10 {
+            font-size: 1.7rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+          
+          .button-primary,
+          .secondary-button {
+            padding: 14px 24px;
+            font-size: 0.95rem;
+          }
+          
+          .logo-wrapper {
+            max-width: 130px;
+          }
+          
+          .hero {
+            padding-top: 18px;
+            padding-bottom: 35px;
+          }
+          
+          .section.hero.v2 {
+            padding-top: 8px;
+          }
+          
+          .section {
+            padding-top: 55px;
+            padding-bottom: 55px;
+          }
+          
+          .mg-top-24px,
+          .mg-top-26px {
+            margin-top: 18px;
+          }
+          
+          .pd-bottom-200px {
+            padding-bottom: 70px;
+          }
+          
+          .grid-2-columns,
+          .grid-3-columns {
+            gap: 24px;
+          }
+        }
+        
+        /* Standard Mobile Phones (iPhone 6/7/8, Galaxy S series) */
+        @media (max-width: 375px) {
           .container-default {
             padding-left: 16px;
             padding-right: 16px;
@@ -1874,6 +2421,71 @@
           .grid-2-columns,
           .grid-3-columns {
             gap: 20px;
+          }
+        }
+        
+        /* Small Mobile Phones (iPhone SE, older Android) */
+        @media (max-width: 320px) {
+          .container-default {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+          
+          .display-12 {
+            font-size: 1.6rem;
+            line-height: 1.1;
+          }
+          
+          .display-10 {
+            font-size: 1.4rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 0.9rem;
+            line-height: 1.4;
+          }
+          
+          .button-primary,
+          .secondary-button {
+            padding: 10px 16px;
+            font-size: 0.85rem;
+          }
+          
+          .logo-wrapper {
+            max-width: 100px;
+          }
+          
+          .hero {
+            padding-top: 12px;
+            padding-bottom: 25px;
+          }
+          
+          .section.hero.v2 {
+            padding-top: 3px;
+          }
+          
+          .section {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+          
+          .mg-top-24px,
+          .mg-top-26px {
+            margin-top: 12px;
+          }
+          
+          .pd-bottom-200px {
+            padding-bottom: 50px;
+          }
+          
+          .grid-2-columns,
+          .grid-3-columns {
+            gap: 16px;
+          }
+          
+          .buttons-row {
+            gap: 16px;
           }
         }
         /* CA Concepts Strip Styles */
