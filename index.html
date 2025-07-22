@@ -1697,6 +1697,168 @@
             height: 38px;
           }
         }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 991px) {
+          .container-default {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+          
+          .hero-v2-grid-wrapper {
+            grid-template-columns: 1fr;
+            gap: 40px;
+          }
+          
+          .full-width-image-right {
+            order: -1;
+            margin-bottom: 20px;
+          }
+          
+          .display-12 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 1.1rem;
+            line-height: 1.6;
+          }
+          
+          .buttons-row {
+            flex-direction: column;
+            gap: 16px;
+            align-items: stretch;
+          }
+          
+          .button-primary,
+          .secondary-button {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+          }
+          
+          .grid-2-columns,
+          .grid-3-columns {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+          
+          .inner-container._440px,
+          .inner-container._536px,
+          .inner-container._700px,
+          .inner-container._844px {
+            max-width: 100%;
+          }
+        }
+        
+        @media (max-width: 767px) {
+          .section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+          
+          .hero {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+          
+          .display-12 {
+            font-size: 2rem;
+            line-height: 1.1;
+          }
+          
+          .display-10 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 1rem;
+            line-height: 1.5;
+          }
+          
+          .mg-top-24px,
+          .mg-top-26px {
+            margin-top: 20px;
+          }
+          
+          .pd-bottom-200px {
+            padding-bottom: 80px;
+          }
+          
+          .nav-menu-hidden-on-mobile {
+            display: none;
+          }
+          
+          .hamburger-menu {
+            display: flex;
+          }
+          
+          .logo-wrapper {
+            max-width: 150px;
+          }
+          
+          .header-container-wrapper {
+            padding: 16px 0;
+          }
+        }
+        
+        @media (max-width: 479px) {
+          .container-default {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+          
+          .display-12 {
+            font-size: 1.8rem;
+            line-height: 1.1;
+          }
+          
+          .display-10 {
+            font-size: 1.6rem;
+            line-height: 1.2;
+          }
+          
+          .paragraph-large {
+            font-size: 0.95rem;
+            line-height: 1.5;
+          }
+          
+          .button-primary,
+          .secondary-button {
+            padding: 12px 20px;
+            font-size: 0.9rem;
+          }
+          
+          .logo-wrapper {
+            max-width: 120px;
+          }
+          
+          .hero {
+            padding-top: 30px;
+            padding-bottom: 30px;
+          }
+          
+          .section {
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+          
+          .mg-top-24px,
+          .mg-top-26px {
+            margin-top: 16px;
+          }
+          
+          .pd-bottom-200px {
+            padding-bottom: 60px;
+          }
+          
+          .grid-2-columns,
+          .grid-3-columns {
+            gap: 20px;
+          }
+        }
         /* CA Concepts Strip Styles */
         .ca-concepts-strip {
           display: flex;
