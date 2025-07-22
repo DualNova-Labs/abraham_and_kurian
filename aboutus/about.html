@@ -87,8 +87,381 @@
     <style>
       .w-webflow-badge {
         display: none !important;
-  }
-</style>
+      }
+      
+      /* Logo glow effect */
+      .logo-glow {
+        filter: drop-shadow(0 0 8px rgba(110, 231, 183, 0.6));
+        animation: pulse-glow 2s infinite alternate;
+        transition: all 0.3s ease;
+        height: 40px;
+        width: 200px;
+      }
+      
+      @keyframes pulse-glow {
+        0% {
+          filter: drop-shadow(0 0 5px rgba(110, 231, 183, 0.4));
+        }
+        100% {
+          filter: drop-shadow(0 0 15px rgba(110, 231, 183, 0.7));
+        }
+      }
+      
+      /* Add hover effect to increase glow */
+      .logo-link:hover .logo-glow {
+        filter: drop-shadow(0 0 18px rgba(110, 231, 183, 0.9));
+      }
+      
+      /* Mobile Responsive Styles */
+      @media (max-width: 991px) {
+        .container-default {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        
+        .hero-v8 {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        
+        .full-width-image-right {
+          order: -1;
+          margin-bottom: 20px;
+        }
+        
+        .display-12 {
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+        
+        .paragraph-large {
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+        
+        .buttons-row {
+          flex-direction: column;
+          gap: 20px;
+          align-items: stretch;
+        }
+        
+        .button-primary,
+        .secondary-button {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+        
+        .grid-2-columns,
+        .grid-3-columns {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        
+        .inner-container._440px,
+        .inner-container._536px,
+        .inner-container._700px,
+        .inner-container._844px {
+          max-width: 100%;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .section {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+        
+        .hero {
+          padding-top: 20px;
+          padding-bottom: 40px;
+        }
+        
+        .section.hero.v8 {
+          padding-top: 10px;
+        }
+        
+        .display-12 {
+          font-size: 2rem;
+          line-height: 1.1;
+        }
+        
+        .display-10 {
+          font-size: 1.8rem;
+          line-height: 1.2;
+        }
+        
+        .paragraph-large {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+        
+        .mg-top-24px,
+        .mg-top-26px {
+          margin-top: 20px;
+        }
+        
+        .pd-bottom-200px {
+          padding-bottom: 80px;
+        }
+        
+        .nav-menu-hidden-on-mobile {
+          display: none;
+        }
+        
+        .hamburger-menu {
+          display: flex;
+        }
+        
+        .logo-wrapper {
+          max-width: 180px;
+        }
+        
+        .header-container-wrapper {
+          padding: 16px 0;
+        }
+        
+        /* Mobile Navigation Improvements */
+        .nav-menu-wrapper {
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
+        }
+        
+        .header-nav-link {
+          padding: 12px 0;
+          font-size: 1.1rem;
+          color: #000000 !important;
+        }
+        
+        .header-nav-link:hover {
+          color: #6ee7b7 !important;
+        }
+        
+        /* Mobile Image Optimization */
+        .full-width-image-right img,
+        ._w-h-100 {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        
+        /* Mobile Touch Targets */
+        .button-primary,
+        .secondary-button {
+          min-height: 44px;
+          touch-action: manipulation;
+        }
+        
+        /* Mobile Text Optimization */
+        .text-neutral-100,
+        .text-neutral-200 {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+      
+      /* Large Screen Phones - Comprehensive Fix (430px to 756px) */
+      @media screen and (min-width: 430px) and (max-width: 756px) {
+        .container-default {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        
+        .display-12 {
+          font-size: 2.1rem;
+          line-height: 1.1;
+        }
+        
+        .display-10 {
+          font-size: 1.8rem;
+          line-height: 1.2;
+        }
+        
+        .paragraph-large {
+          font-size: 1.05rem;
+          line-height: 1.5;
+        }
+        
+        .button-primary,
+        .secondary-button {
+          padding: 16px 28px;
+          font-size: 1rem;
+          min-height: 48px;
+        }
+        
+        .logo-wrapper {
+          max-width: 140px;
+        }
+        
+        .hero {
+          padding-top: 20px;
+          padding-bottom: 40px;
+        }
+        
+        .section.hero.v8 {
+          padding-top: 10px;
+        }
+        
+        .section {
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+        
+        .mg-top-24px,
+        .mg-top-26px {
+          margin-top: 20px;
+        }
+        
+        .pd-bottom-200px {
+          padding-bottom: 75px;
+        }
+        
+        .grid-2-columns,
+        .grid-3-columns {
+          gap: 26px;
+        }
+        
+        .buttons-row {
+          gap: 22px;
+        }
+      }
+      
+      /* Standard Mobile Phones (iPhone 6/7/8, Galaxy S series) */
+      @media (max-width: 375px) {
+        .container-default {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        
+        .display-12 {
+          font-size: 1.8rem;
+          line-height: 1.1;
+        }
+        
+        .display-10 {
+          font-size: 1.6rem;
+          line-height: 1.2;
+        }
+        
+        .paragraph-large {
+          font-size: 0.95rem;
+          line-height: 1.5;
+        }
+        
+        .button-primary,
+        .secondary-button {
+          padding: 12px 20px;
+          font-size: 0.9rem;
+        }
+        
+        .logo-wrapper {
+          max-width: 120px;
+        }
+        
+        .hero {
+          padding-top: 15px;
+          padding-bottom: 30px;
+        }
+        
+        .section.hero.v8 {
+          padding-top: 5px;
+        }
+        
+        .section {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        
+        .mg-top-24px,
+        .mg-top-26px {
+          margin-top: 16px;
+        }
+        
+        .pd-bottom-200px {
+          padding-bottom: 60px;
+        }
+        
+        .grid-2-columns,
+        .grid-3-columns {
+          gap: 20px;
+        }
+      }
+      
+      /* Small Mobile Phones (iPhone SE, older Android) */
+      @media (max-width: 320px) {
+        .container-default {
+          padding-left: 12px;
+          padding-right: 12px;
+        }
+        
+        .display-12 {
+          font-size: 1.6rem;
+          line-height: 1.1;
+        }
+        
+        .display-10 {
+          font-size: 1.4rem;
+          line-height: 1.2;
+        }
+        
+        .paragraph-large {
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+        
+        .button-primary,
+        .secondary-button {
+          padding: 10px 16px;
+          font-size: 0.85rem;
+        }
+        
+        .logo-wrapper {
+          max-width: 100px;
+        }
+        
+        .hero {
+          padding-top: 12px;
+          padding-bottom: 25px;
+        }
+        
+        .section.hero.v8 {
+          padding-top: 3px;
+        }
+        
+        .section {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+        
+        .mg-top-24px,
+        .mg-top-26px {
+          margin-top: 12px;
+        }
+        
+        .pd-bottom-200px {
+          padding-bottom: 50px;
+        }
+        
+        .grid-2-columns,
+        .grid-3-columns {
+          gap: 16px;
+        }
+        
+        .buttons-row {
+          gap: 16px;
+        }
+      }
+    </style>
+    <style>
+    @media (max-width: 767px) {
+      .display-12 {
+        text-align: center !important;
+        width: 100%;
+        display: block;
+      }
+    }
+    </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
         currencyCode: "USD",
@@ -123,8 +496,13 @@
               <div class="logo-wrapper _188px">
                 <a href="../index.html" class="logo-link w-inline-block"
                   ><img
+<<<<<<< HEAD
                     src="images/orange2.png"
+=======
+                    src="../images/main_logo.png"
+>>>>>>> fd157d7b08e30e51b982b1fc618234f549cbe7d4
                     alt="Logo Web - Accountant X Webflow Template"
+                    class="logo-glow"
                 /></a>
               </div>
               <nav role="navigation" class="nav-menu-wrapper w-nav-menu">
@@ -212,11 +590,11 @@
               "
               class="line-left---content hero"
             >
-              <div class="inner-container _700px" style="opacity: 1; transform: none; margin-bottom: 0; padding-top: 0; text-align: right; padding-right: 20px;">
-                <h1 class="display-12" style="margin: 0; display: inline-block;">About our company</h1>
+              <div class="inner-container _700px hero-heading-container">
+                <h1 class="display-12">About our company</h1>
               </div>
             </div>
-            <div id="w-node-fd9e73d9-1aca-6569-7d01-42e4cf85dd00-663c3d44" class="inner-container _470px _100-mbl" style="opacity: 1; transform: none; margin-top: -10px;">
+            <div id="w-node-fd9e73d9-1aca-6569-7d01-42e4cf85dd00-663c3d44" class="inner-container _470px _100-mbl hero-paragraph-container" style="opacity: 1; transform: none; margin-top: -10px;">
               <p class="paragraph-large" style="text-align: left; margin-left: 0; opacity: 1; transform: none;">
                 Welcome to Abraham &amp; Kurian, Chartered Accountants—your trusted financial advisors. Since 1994, we have built a reputation for delivering high-quality professional services in audit and assurance, taxation, business restructuring, valuations, and regulatory compliance. Backed by a team of experienced Chartered Accountants, we are committed to providing tailored financial solutions that support your business growth.
               </p>
@@ -369,242 +747,7 @@
           </div>
         </div>
       </section>
-      <section class="section pd-200px">
-        <div class="w-layout-blockcontainer container-default w-container">
-          <div class="w-layout-grid grid-2-columns our-mision-grid-2-col">
-            <div
-              id="w-node-_vision-section-01"
-              data-w-id="vision-section-01"
-              style="
-                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="inner-container _532px _100-tablet"
-            >
-              <div
-                data-w-id="vision-section-02"
-                style="
-                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                    rotateY(0) rotateZ(0) skew(0, 0);
-                  opacity: 0;
-                "
-                class="line-left---content">
-                <div class="vertical-line-decoration section-line"></div>
-                <h2 class="display-10">Our vision</h2>
-              </div>
-              <div class="mg-top-16px">
-                <div class="paragraph-large">
-                  <p>
-                    To be recognized as one of the most trusted and respected CA firms in Central Kerala, consistently delivering value through professionalism, excellence, and client satisfaction.
-                  </p>
-                  <div class="mg-top-16px">
-                    <p>
-                      We aim to foster long-term relationships built on trust, while also nurturing a positive and growth-oriented environment for our team—ensuring that we deliver our best to every client, every time.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="w-node-_9daa5723-aa3a-8e47-91bf-9387f82337cc-663c3d44"
-              data-w-id="9daa5723-aa3a-8e47-91bf-9387f82337cc"
-              style="
-                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="inner-container _532px _100-tablet"
-            >
-              <div
-                data-w-id="fd9c5232-03b6-31be-6e1b-de9afa8f4d86"
-                style="
-                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                    rotateY(0) rotateZ(0) skew(0, 0);
-                  opacity: 0;
-                "
-                class="line-left---content">
-                <div class="vertical-line-decoration section-line"></div>
-                <h2 class="display-10">Our mission</h2>
-              </div>
-              <div class="mg-top-16px">
-                <div class="paragraph-large">
-                  <p>
-                    Our mission is to empower our clients by delivering strategic, insightful, and result-driven financial services. We are committed to long-term partnerships, helping our clients enhance corporate value, navigate challenges, and achieve sustainable growth in a dynamic business environment.
-                  </p>
-                  <div class="mg-top-16px">
-                    <p>
-                      Through a combination of expertise, integrity, and innovation, Abraham & Kurian strives to be a key driver in our clients' financial success. We maintain the highest standards of professional excellence while providing clarity that enables confident decision-making.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Our Approach Section -->
-      <section class="section approach-section">
-        <div class="w-layout-blockcontainer container-default w-container">
-          <!-- Centered heading for Our Approach -->
-          <div class="inner-container _700px center">
-            <div class="text-center">
-              <div class="accent-top-line center"></div>
-              <h2 class="display-10">Our Approach</h2>
-            </div>
-          </div>
-          
-          <div class="w-layout-grid grid-2-columns our-mision-grid-2-col">
-            <div
-              data-w-id="approach-section-01"
-              style="
-                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="image-wrapper border-radius-36px"
-            >
-              <img
-                src="images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template.jpg"
-                alt="Our Approach - Abraham & Kurian"
-                sizes="(max-width: 991px) 100vw, (max-width: 1439px) 54vw, (max-width: 1919px) 55vw, 56vw"
-                srcset="
-                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-500.jpg   500w,
-                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-800.jpg   800w,
-                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-1080.jpg 1080w,
-                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-1600.jpg 1600w,
-                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template.jpg        2728w
-                "
-                class="image cover-image"
-              />
-            </div>
-            <div
-              id="w-node-approach-section-02"
-              data-w-id="approach-section-03"
-              style="
-                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="inner-container _532px _100-tablet"
-            >
-              <div class="paragraph-large">
-                <p>
-                  At Abraham & Kurian, we believe in building meaningful partnerships through a consultative, client-first approach. Our process begins by understanding your business goals, followed by identifying your specific financial needs and delivering customised, practical solutions.
-                </p>
-                <div class="mg-top-16px">
-                  <p>
-                    We work with a diverse clientele across sectors such as trading, non-profits (NGOs), banking, and financial services, ensuring that each client receives industry-specific insights and strategies. Our commitment to quality, reliability, and continuous improvement ensures that we uphold the highest standards in everything we do.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- TECHNOLOGY & TOOLS Section -->
-      <section class="section tech-tools-section">
-        <div class="w-layout-blockcontainer container-default w-container">
-          <!-- Centered heading for TECHNOLOGY & TOOLS -->
-          <div class="inner-container _700px center">
-            <div class="text-center">
-              <div class="accent-top-line center"></div>
-              <h2 class="display-10 text-uppercase">TECHNOLOGY & TOOLS</h2>
-            </div>
-          </div>
-          
-          <!-- Tools Cards Container -->
-          <div class="tools-cards-container">
-            <!-- Accounting Software Card -->
-            <div class="tools-card">
-              <h3 class="tools-card-title">Accounting Software</h3>
-              <div class="tools-tags-container">
-                <div class="tool-tag">Tally</div>
-                <div class="tool-tag">Zoho</div>
-                <div class="tool-tag">Quick Books</div>
-                <div class="tool-tag">Xero</div>
-              </div>
-            </div>
-            
-            <!-- AI Tools Card -->
-            <div class="tools-card">
-              <h3 class="tools-card-title">AI Tools</h3>
-              <div class="tools-tags-container">
-                <div class="tool-tag">Zoho</div>
-                <div class="tool-tag">Xero</div>
-                <div class="tool-tag">QuickBooks</div>
-              </div>
-            </div>
-            
-            <!-- ERP & Compliance Tools Card -->
-            <div class="tools-card">
-              <h3 class="tools-card-title">ERP & Compliance Tools</h3>
-              <div class="tools-tags-container">
-                <div class="tool-tag">Winman (GST, Income Tax, TDS)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Our Offices Section -->
-      <section class="section offices-section">
-        <div class="w-layout-blockcontainer container-default w-container">
 
-              <div class="mg-top-40px">
-                <div
-                  data-w-id="offices-section-03"
-                  style="
-                    -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-              <img
-                src="images/65bbb5d5598d1a73cda8d8f0_bg-square-inside-shape-decoration-dark-01-accountant-x-webflow-template.svg"
-                loading="eager"
-                alt="Bg Square Inside Shape Decoration Dark 01 - Abraham & Kurian"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      
       <section class="section team-section">
         <div class="w-layout-blockcontainer container-default w-container">
           <div
@@ -927,6 +1070,242 @@
           </div>
         </div>
       </section>
+      <section class="section pd-200px">
+        <div class="w-layout-blockcontainer container-default w-container">
+          <div class="w-layout-grid grid-2-columns our-mision-grid-2-col">
+            <div
+              id="w-node-_vision-section-01"
+              data-w-id="vision-section-01"
+              style="
+                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                opacity: 0;
+              "
+              class="inner-container _532px _100-tablet"
+            >
+              <div
+                data-w-id="vision-section-02"
+                style="
+                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
+                    rotateY(0) rotateZ(0) skew(0, 0);
+                  opacity: 0;
+                "
+                class="line-left---content">
+                <div class="vertical-line-decoration section-line"></div>
+                <h2 class="display-10">Our vision</h2>
+              </div>
+              <div class="mg-top-16px">
+                <div class="paragraph-large">
+                  <p>
+                    To be recognized as one of the most trusted and respected CA firms in Central Kerala, consistently delivering value through professionalism, excellence, and client satisfaction.
+                  </p>
+                  <div class="mg-top-16px">
+                    <p>
+                      We aim to foster long-term relationships built on trust, while also nurturing a positive and growth-oriented environment for our team—ensuring that we deliver our best to every client, every time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              id="w-node-_9daa5723-aa3a-8e47-91bf-9387f82337cc-663c3d44"
+              data-w-id="9daa5723-aa3a-8e47-91bf-9387f82337cc"
+              style="
+                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                opacity: 0;
+              "
+              class="inner-container _532px _100-tablet"
+            >
+              <div
+                data-w-id="fd9c5232-03b6-31be-6e1b-de9afa8f4d86"
+                style="
+                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
+                    rotateY(0) rotateZ(0) skew(0, 0);
+                  opacity: 0;
+                "
+                class="line-left---content">
+                <div class="vertical-line-decoration section-line"></div>
+                <h2 class="display-10">Our mission</h2>
+              </div>
+              <div class="mg-top-16px">
+                <div class="paragraph-large">
+                  <p>
+                    Our mission is to empower our clients by delivering strategic, insightful, and result-driven financial services. We are committed to long-term partnerships, helping our clients enhance corporate value, navigate challenges, and achieve sustainable growth in a dynamic business environment.
+                  </p>
+                  <div class="mg-top-16px">
+                    <p>
+                      Through a combination of expertise, integrity, and innovation, Abraham & Kurian strives to be a key driver in our clients' financial success. We maintain the highest standards of professional excellence while providing clarity that enables confident decision-making.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Our Approach Section -->
+      <section class="section approach-section">
+        <div class="w-layout-blockcontainer container-default w-container">
+          <!-- Centered heading for Our Approach -->
+          <div class="inner-container _700px center">
+            <div class="text-center">
+              <div class="accent-top-line center"></div>
+              <h2 class="display-10">Our Approach</h2>
+            </div>
+          </div>
+          
+          <div class="w-layout-grid grid-2-columns our-mision-grid-2-col">
+            <div
+              data-w-id="approach-section-01"
+              style="
+                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                opacity: 0;
+              "
+              class="image-wrapper border-radius-36px"
+            >
+              <img
+                src="images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template.jpg"
+                alt="Our Approach - Abraham & Kurian"
+                sizes="(max-width: 991px) 100vw, (max-width: 1439px) 54vw, (max-width: 1919px) 55vw, 56vw"
+                srcset="
+                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-500.jpg   500w,
+                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-800.jpg   800w,
+                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-1080.jpg 1080w,
+                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template-p-1600.jpg 1600w,
+                  images/65bbb0e6ae4fbe997c7a6dec_four-people-work-meeting-accountant-x-webflow-template.jpg        2728w
+                "
+                class="image cover-image"
+              />
+            </div>
+            <div
+              id="w-node-approach-section-02"
+              data-w-id="approach-section-03"
+              style="
+                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
+                  rotateY(0) rotateZ(0) skew(0, 0);
+                opacity: 0;
+              "
+              class="inner-container _532px _100-tablet"
+            >
+              <div class="paragraph-large">
+                <p>
+                  At Abraham & Kurian, we believe in building meaningful partnerships through a consultative, client-first approach. Our process begins by understanding your business goals, followed by identifying your specific financial needs and delivering customised, practical solutions.
+                </p>
+                <div class="mg-top-16px">
+                  <p>
+                    We work with a diverse clientele across sectors such as trading, non-profits (NGOs), banking, and financial services, ensuring that each client receives industry-specific insights and strategies. Our commitment to quality, reliability, and continuous improvement ensures that we uphold the highest standards in everything we do.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- TECHNOLOGY & TOOLS Section -->
+      <section class="section tech-tools-section">
+        <div class="w-layout-blockcontainer container-default w-container">
+          <!-- Centered heading for TECHNOLOGY & TOOLS -->
+          <div class="inner-container _700px center">
+            <div class="text-center">
+              <div class="accent-top-line center"></div>
+              <h2 class="display-10 text-uppercase">TECHNOLOGY & TOOLS</h2>
+            </div>
+          </div>
+          
+          <!-- Tools Cards Container -->
+          <div class="tools-cards-container">
+            <!-- Accounting Software Card -->
+            <div class="tools-card">
+              <h3 class="tools-card-title">Accounting Software</h3>
+              <div class="tools-tags-container">
+                <div class="tool-tag">Tally</div>
+                <div class="tool-tag">Zoho</div>
+                <div class="tool-tag">Quick Books</div>
+                <div class="tool-tag">Xero</div>
+              </div>
+            </div>
+            
+            <!-- AI Tools Card -->
+            <div class="tools-card">
+              <h3 class="tools-card-title">AI Tools</h3>
+              <div class="tools-tags-container">
+                <div class="tool-tag">Zoho</div>
+                <div class="tool-tag">Xero</div>
+                <div class="tool-tag">QuickBooks</div>
+              </div>
+            </div>
+            
+            <!-- ERP & Compliance Tools Card -->
+            <div class="tools-card">
+              <h3 class="tools-card-title">ERP & Compliance Tools</h3>
+              <div class="tools-tags-container">
+                <div class="tool-tag">Winman (GST, Income Tax, TDS)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Our Offices Section -->
+      <section class="section offices-section">
+        <div class="w-layout-blockcontainer container-default w-container">
+
+              <div class="mg-top-40px">
+                <div
+                  data-w-id="offices-section-03"
+                  style="
+                    -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+              <img
+                src="images/65bbb5d5598d1a73cda8d8f0_bg-square-inside-shape-decoration-dark-01-accountant-x-webflow-template.svg"
+                loading="eager"
+                alt="Bg Square Inside Shape Decoration Dark 01 - Abraham & Kurian"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section class="section pd-200px">
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="w-layout-grid grid-2-columns our-values-grid-2-col">
@@ -1659,6 +2038,29 @@
           gap: 16px; /* Smaller gap on mobile */
         }
       }
+    </style>
+    <style>
+    .hero-heading-container {
+      margin-bottom: 0;
+      padding-top: 0;
+      text-align: right;
+      padding-right: 20px;
+    }
+    .hero-paragraph-container {
+      margin-top: -10px;
+      text-align: left;
+      margin-left: 0;
+    }
+    @media (max-width: 767px) {
+      .hero-heading-container {
+        text-align: center !important;
+        padding-right: 0 !important;
+      }
+      .hero-paragraph-container {
+        text-align: center !important;
+        margin-left: 0 !important;
+      }
+    }
     </style>
   </body>
 </html>
