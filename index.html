@@ -1846,6 +1846,41 @@
             object-fit: cover;
             border-radius: 8px;
           }
+        }
+        
+        /* Desktop Layout Fixes for Trusted Experts Section */
+        @media (min-width: 992px) {
+          .trusted-experts-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 60px !important;
+            align-items: center !important;
+          }
+          
+          .trusted-experts-content-left {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+            align-items: start !important;
+          }
+          
+          .image-wrapper.border-radius-24px {
+            width: 100% !important;
+            max-width: none !important;
+            height: auto !important;
+          }
+          
+          .image-wrapper.border-radius-24px img {
+            width: 100% !important;
+            height: auto !important;
+            object-fit: cover !important;
+            border-radius: 24px !important;
+          }
+          
+          .inner-container._550px._100-mbl {
+            max-width: 100% !important;
+            width: 100% !important;
+          }
           
           /* Mobile Touch Targets */
           .button-primary,

@@ -1633,7 +1633,7 @@
     /* Styles for TECHNOLOGY & TOOLS Section */
     .tools-cards-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 30px;
       justify-content: center;
       margin-top: 20px;
@@ -1644,12 +1644,12 @@
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       padding: 40px 30px;
-      width: 100%;
-      max-width: 420px;
+      flex: 1;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
 
     .tools-card:hover {
@@ -1663,6 +1663,7 @@
       margin-bottom: 25px;
       text-align: center;
       color: #333;
+      width: 100%;
     }
 
     .tools-tags-container {
@@ -1671,6 +1672,7 @@
       gap: 12px;
       justify-content: center;
       width: 100%;
+      text-align: center;
     }
 
     .tool-tag {
@@ -1693,11 +1695,12 @@
     @media (max-width: 991px) {
       .tools-cards-container {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
       }
       
       .tools-card {
-        max-width: 100%;
+        width: 100%;
+        min-height: 240px;
       }
     }
 
