@@ -307,7 +307,14 @@
             <a href="../../blog/blog.html" class="footer-link">Blog</a>
             <a href="../../contact/contact.html" class="footer-link">Contact</a>
           </nav>
-          <div class="footer-copyright">© Abraham & Kurian</div>
+          <div class="footer-copyright">
+            <div>© 2025 Abraham & Kurian. All rights reserved.</div>
+            <div class="footer-terms">
+              <a href="#" class="footer-terms-link">Privacy Policy</a>
+              <span class="footer-separator">|</span>
+              <a href="#" class="footer-terms-link">Terms of Service</a>
+            </div>
+          </div>
         </div>
       </footer>
       <style>
@@ -349,10 +356,32 @@
           color: #6ee7b7;
         }
         .footer-copyright {
-          font-size: 1rem;
+          font-size: 0.95rem;
           color: #000000;
-          margin-top: 12px;
+          margin-top: 8px;
           text-align: center;
+        }
+        .footer-terms {
+          margin-top: 4px;
+          font-size: 0.95em;
+          color: #888;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          justify-content: center;
+        }
+        .footer-terms-link {
+          color: #888;
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .footer-terms-link:hover {
+          color: #000;
+          text-decoration: none;
+        }
+        .footer-separator {
+          margin: 0 6px;
+          color: #bbb;
         }
         
         /* New styles for improved layout */
