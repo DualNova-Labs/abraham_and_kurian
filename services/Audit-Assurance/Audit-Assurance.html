@@ -269,24 +269,47 @@
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="about-service-container">
             <div class="paragraph-large content-text">
-              <div fs-richtext-element="rich-text" class="rich-text w-richtext">
-                <h2>AUDIT AND ASSURANCE SERVICES</h2>
-                <strong>Audit and Assurance Services</strong>
-                <p>With rising compliance requirements and financial scrutiny, it’s vital for businesses to maintain clean and transparent financials. Abraham and Kurian offers end-to-end auditing and assurance services for companies across all sectors.</p>
-                <strong>Our Audit Services</strong>
-                <ul>
-                  <li><strong>Internal & Statutory Audits</strong><br>Our chartered accountants conduct statutory, internal, and tax audits tailored to your industry standards.</li>
-                  <li><strong>Taxation Services</strong><br>We file income tax returns, TDS, and handle 15CA/CB certification with accuracy and compliance.</li>
-                  <li><strong>Corporate & Financial Advisory</strong><br>We assist with restructuring, legal compliance, and capital certification including net worth validation.</li>
-                  <li><strong>Regulatory Support</strong><br>
-                    <ul>
-                      <li>GST returns and reconciliation</li>
-                      <li>MCA filings and Softex forms</li>
-                      <li>Project reports for funding</li>
-                      <li>Digital signature and TAN registration</li>
-                    </ul>
-                  </li>
+              <div class="content-text">
+                <h2>Professional Audit & Assurance Services</h2>
+                <p>With rising compliance requirements and financial scrutiny, it's vital for businesses to maintain clean and transparent financials. Abraham and Kurian offers comprehensive end-to-end auditing and assurance services for companies across all sectors, ensuring accuracy, compliance, and stakeholder confidence.</p>
+                
+                <p>Our experienced team of chartered accountants brings deep industry knowledge and meticulous attention to detail, providing reliable audit services that meet the highest professional standards.</p>
+                
+                <h3>Our Comprehensive Audit Services</h3>
+                
+                <div class="service-features-grid">
+                  <div class="service-feature-item">
+                    <h4>Internal & Statutory Audits</h4>
+                    <p>Our chartered accountants conduct thorough statutory, internal, and tax audits tailored to your industry standards, ensuring compliance with regulatory requirements and identifying areas for operational improvement.</p>
+                  </div>
+                  
+                  <div class="service-feature-item">
+                    <h4>Taxation Services</h4>
+                    <p>We provide comprehensive tax services including income tax return filing, TDS compliance, and 15CA/CB certification with accuracy and full regulatory compliance, optimizing your tax position.</p>
+                  </div>
+                  
+                  <div class="service-feature-item">
+                    <h4>Corporate & Financial Advisory</h4>
+                    <p>We assist with corporate restructuring, legal compliance, and capital certification including net worth validation, providing strategic guidance for business growth and financial optimization.</p>
+                  </div>
+                  
+                  <div class="service-feature-item">
+                    <h4>Regulatory Support</h4>
+                    <p>Comprehensive regulatory assistance including GST returns and reconciliation, MCA filings, Softex forms, project reports for funding, digital signature services, and TAN registration.</p>
+                  </div>
+                </div>
+                
+                <h3>Why Choose Abraham & Kurian for Audit Services?</h3>
+                <ul class="benefits-list">
+                  <li>Industry-specific audit expertise across multiple sectors</li>
+                  <li>Comprehensive regulatory knowledge and compliance assurance</li>
+                  <li>Detailed risk assessment and internal control evaluation</li>
+                  <li>Timely delivery and transparent reporting processes</li>
+                  <li>Strategic recommendations for business improvement</li>
+                  <li>Cost-effective audit solutions for businesses of all sizes</li>
                 </ul>
+                
+                <p class="cta-text">Ensure your business maintains the highest standards of financial transparency and compliance. Contact Abraham & Kurian today for professional audit and assurance services.</p>
               </div>
             </div>
           </div>
@@ -525,6 +548,107 @@
           width: 100%;
         }
         
+        /* Enhanced content styling */
+        .content-text h2 {
+          font-size: 2.2rem;
+          font-weight: 700;
+          color: #1a1a1a;
+          margin-bottom: 24px;
+          line-height: 1.3;
+        }
+        
+        .content-text h3 {
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: #2a2a2a;
+          margin: 40px 0 24px 0;
+          line-height: 1.4;
+        }
+        
+        .content-text h4 {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 12px;
+          line-height: 1.4;
+        }
+        
+        .content-text p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #555;
+          margin-bottom: 20px;
+        }
+        
+        .service-features-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 32px;
+          margin: 32px 0;
+        }
+        
+        .service-feature-item {
+          background: #f8f9fa;
+          padding: 28px;
+          border-radius: 12px;
+          border-left: 4px solid #6ee7b7;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-feature-item:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-feature-item h4 {
+          color: #1a1a1a;
+          margin-bottom: 16px;
+          font-size: 1.25rem;
+        }
+        
+        .service-feature-item p {
+          color: #666;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 0;
+        }
+        
+        .benefits-list {
+          list-style: none;
+          padding: 0;
+          margin: 24px 0;
+        }
+        
+        .benefits-list li {
+          position: relative;
+          padding: 12px 0 12px 32px;
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #555;
+        }
+        
+        .benefits-list li:before {
+          content: '✓';
+          position: absolute;
+          left: 0;
+          top: 12px;
+          color: #6ee7b7;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        
+        .cta-text {
+          background: linear-gradient(135deg, #6ee7b7 0%, #34d399 100%);
+          color: white;
+          padding: 24px;
+          border-radius: 12px;
+          font-size: 1.15rem;
+          font-weight: 500;
+          text-align: center;
+          margin: 40px 0 0 0;
+          line-height: 1.6;
+        }
+        
         .about-service-container {
           max-width: none;
           width: 100%;
@@ -558,7 +682,53 @@
           }
           
           .content-text h2 {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
+            margin-bottom: 18px;
+          }
+          
+          .content-text h3 {
+            font-size: 1.3rem;
+            margin: 28px 0 18px 0;
+          }
+          
+          .content-text h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+          }
+          
+          .content-text p {
+            font-size: 1rem;
+            margin-bottom: 16px;
+          }
+          
+          .service-features-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 20px 0;
+          }
+          
+          .service-feature-item {
+            padding: 18px;
+          }
+          
+          .service-feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+          }
+          
+          .service-feature-item p {
+            font-size: 0.95rem;
+          }
+          
+          .benefits-list li {
+            font-size: 1rem;
+            padding: 8px 0 8px 26px;
+          }
+          
+          .cta-text {
+            padding: 18px;
+            font-size: 1.05rem;
+            margin: 28px 0 0 0;
           }
           
           .footer-container {
