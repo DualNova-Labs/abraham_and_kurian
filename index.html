@@ -2602,23 +2602,71 @@
         }
         @media (max-width: 900px) {
           .ca-concepts-strip {
-            gap: 28px;
-          }
-          .ca-concept-icon {
-            font-size: 1.7rem;
-          }
-        }
-        @media (max-width: 600px) {
-          .ca-concepts-strip {
-            gap: 12px;
-            flex-wrap: wrap;
+            gap: 24px;
             justify-content: center;
           }
+          .ca-concept-icon {
+            font-size: 1.8rem;
+          }
+        }
+        @media (max-width: 767px) {
+          .ca-concepts-strip {
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 10px;
+          }
           .ca-concept-item {
-            min-width: 80px;
+            min-width: 90px;
+            margin-bottom: 16px;
+          }
+          .ca-concept-icon {
+            font-size: 1.6rem;
+            margin-bottom: 6px;
           }
           .ca-concept-label {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            line-height: 1.2;
+          }
+        }
+        @media (max-width: 480px) {
+          .ca-concepts-strip {
+            gap: 16px;
+            padding: 0 8px;
+          }
+          .ca-concept-item {
+            min-width: 75px;
+            margin-bottom: 12px;
+          }
+          .ca-concept-icon {
+            font-size: 1.4rem;
+          }
+          .ca-concept-label {
+            font-size: 0.85rem;
+          }
+        }
+        
+        /* Mobile Statistics Centering */
+        @media (max-width: 767px) {
+          .flex-horizontal.space-between.gap-18px---flex-wrap {
+            justify-content: center !important;
+            text-align: center;
+          }
+          
+          .flex-horizontal.space-between.gap-18px---flex-wrap > div {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          /* Target statistics numbers specifically */
+          .display-12.bold.text-neutral-100 {
+            text-align: center !important;
+          }
+          
+          /* Target statistics labels */
+          .paragraph-large.text-neutral-100 {
+            text-align: center !important;
           }
         }
       </style>
