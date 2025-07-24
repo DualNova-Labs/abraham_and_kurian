@@ -348,7 +348,7 @@
           padding: 48px 0 32px 0;
         }
         .footer-container {
-          max-width: 600px;
+          max-width: 480px;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
@@ -723,6 +723,20 @@
           }
         }
         
+        @media (max-width: 600px) {
+          .footer-container {
+            padding: 0 16px;
+            gap: 24px;
+          }
+          .footer-nav {
+            gap: 18px;
+            font-size: 0.98rem;
+          }
+          .footer-logo-img {
+            height: 42px;
+          }
+        }
+        
         /* Mobile Styles (767px and below) */
         @media (max-width: 767px) {
           .grid-2-columns.service-single-wrapper {
@@ -887,8 +901,6 @@
           
           .footer-nav {
             gap: 16px;
-            flex-direction: column;
-            align-items: center;
           }
           
           .about-service-container {
