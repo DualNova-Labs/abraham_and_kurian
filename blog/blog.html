@@ -289,6 +289,18 @@
           align-items: center;
           width: 100%;
           height: 100%;
+          position: relative;
+          z-index: 10;
+        }
+        
+        /* Override inline transforms on mobile */
+        .card-shape-bg.hero-v6 .text-center {
+          transform: none !important;
+          -webkit-transform: none !important;
+          -moz-transform: none !important;
+          -ms-transform: none !important;
+          position: relative;
+          z-index: 15;
         }
         .blog-post-grid {
           grid-template-columns: 1fr !important;
@@ -663,86 +675,7 @@
       </div>
       <section class="section hero v6">
         <div class="w-layout-blockcontainer container-default w-container">
-          <div
-            data-w-id="f4065c24-8f12-9cc5-908d-cb2fb3873ab5"
-            style="opacity: 0"
-            class="card-shape-bg hero-v6"
-          >
-            <div class="inner-container _1130px center">
-              <div
-                data-w-id="c1b8879d-fe97-065c-c196-93b5a44bd84a"
-                style="
-                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                    rotateY(0) rotateZ(0) skew(0, 0);
-                  opacity: 0;
-                "
-                class="text-center"
-              >
-                <div class="accent-top-line hero"></div>
-                <h1 class="display-12 text-neutral-100">Blog & resources</h1>
-                <div class="mg-top-8px">
-                  <div class="inner-container _660px center">
-                    <p class="paragraph-large text-neutral-200">
-                      Welcome to our blog, where we share expert insights, industry updates, and practical tips to help you stay informed and empowered. Explore our latest articles and discover valuable knowledge for your financial journey.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="mg-top-40px">
-                <div class="w-dyn-list">
-                  <div role="list" class="w-dyn-items">
-                    <div role="listitem" class="w-dyn-item">
-                      <a
-                        data-w-id="5221d00c-7773-a6fb-2de1-ff50c7792b0b"
-                        style="
-                          -webkit-transform: translate3d(0, 10%, 0)
-                            scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                            skew(0, 0);
-                          -moz-transform: translate3d(0, 10%, 0)
-                            scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                            skew(0, 0);
-                          -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                            rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                          transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                            rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                          opacity: 0;
-                        "
-                        href="/post/how-to-optimize-your-companys-tax-management"
-                        class="blog-post-link position-relative w-inline-block"
-                        ><div class="image-wrapper featured-v3-image" style="width:100%;max-width:1000px;margin:0 auto;">
-                          <img
-                            src="images/blog1.jpg"
-                            alt="How to optimize your company's tax management"
-                            class="card-image"
-                            style="width:100%;height:auto;max-width:100%;border-radius:32px;display:block;margin:0 auto;object-fit:cover;"
-                          />
-                        </div></a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="half-bg-top hero-v6">
-              <div
-                data-w-id="066ef9d3-a46b-29ff-4646-ccb87919c4d4"
-                style="opacity: 0"
-                class="shape-wrapper shape-top---left shape-width-72"
-              >
-                <img
-                  src="images/65bc20ab6904e30369e972c1_bg-square-inside-shape-decoration-white-08-accountant-x-webflow-template.svg"
-                  loading="lazy"
-                  alt="Bg Square Inside Shape Decoration White 08 - Accountant X Webflow Template"
-                />
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
       <section class="section pd-bottom-200px" style="padding-top: 0; margin-top: 0;">
