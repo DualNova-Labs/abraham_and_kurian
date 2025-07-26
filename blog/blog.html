@@ -168,9 +168,44 @@
           grid-template-columns: 1fr;
           gap: 30px;
         }
+        
+        /* Blog specific mobile improvements */
+        .grid-2-columns.blog-post-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        
+        .blog-post-link {
+          max-width: 100%;
+        }
+        
+        .card-image {
+          width: 100%;
+          height: auto;
+          border-radius: 24px;
+        }
+        
+        .card-title.display-7 {
+          font-size: 1.5rem;
+          line-height: 1.3;
+        }
+        
+        .hero-section {
+          padding: 60px 0;
+        }
+        
+        .section-title {
+          font-size: 2rem;
+          text-align: center;
+        }
       }
       
       @media (max-width: 767px) {
+        .container-default {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        
         .section {
           padding-top: 60px;
           padding-bottom: 60px;
@@ -216,6 +251,7 @@
         .nav-menu-wrapper {
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px); /* Safari support */
         }
         
         .header-nav-link {
@@ -236,17 +272,98 @@
         }
         
         /* Mobile Blog Grid */
+        
+        /* Increase hero card height on mobile */
+        .card-shape-bg.hero-v6 {
+          padding-top: 100px;
+          padding-bottom: 100px;
+          min-height: 500px;
+          display: flex;
+          align-items: center;
+        }
+        
+        .card-shape-bg.hero-v6 .inner-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+        }
         .blog-post-grid {
           grid-template-columns: 1fr !important;
           gap: 20px !important;
         }
+        
+        /* Enhanced blog mobile styles */
+        .grid-2-columns.blog-post-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        
+        .blog-post-link {
+          display: block;
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+        
+        .image-wrapper.border-radius-24px {
+          margin-bottom: 1rem;
+        }
+        
+        .card-image {
+          width: 100%;
+          height: auto;
+          max-height: 200px;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+        
+        .card-title.display-7 {
+          font-size: 1.3rem;
+          line-height: 1.4;
+          margin-bottom: 1rem;
+        }
+        
+        .flex-horizontal.space-between {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+        
+        .badge.neutral {
+          font-size: 0.8rem;
+          padding: 4px 12px;
+        }
+        
+        .paragraph-medium {
+          font-size: 0.9rem;
+        }
+        
+        .hero-section {
+          padding: 40px 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        
+        .mg-top-24px {
+          margin-top: 16px;
+        }
+        
+        .mg-top-22px {
+          margin-top: 12px;
+        }
       }
       
       /* Large Screen Phones */
-      @media screen and (min-width: 430px) and (max-width: 756px) {
+      @media (max-width: 991px) {
         .container-default {
-          padding-left: 24px;
-          padding-right: 24px;
+          padding-left: 20px;
+          padding-right: 20px;
         }
         
         .display-12 {
@@ -264,10 +381,40 @@
         .logo-wrapper {
           max-width: 140px;
         }
+        
+        /* Blog specific mobile improvements */
+        .grid-2-columns.blog-post-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        
+        .blog-post-link {
+          max-width: 100%;
+        }
+        
+        .card-image {
+          width: 100%;
+          height: auto;
+          border-radius: 24px;
+        }
+        
+        .card-title.display-7 {
+          font-size: 1.5rem;
+          line-height: 1.3;
+        }
+        
+        .hero-section {
+          padding: 60px 0;
+        }
+        
+        .section-title {
+          font-size: 2rem;
+          text-align: center;
+        }
       }
       
       /* Standard Mobile Phones */
-      @media (max-width: 375px) {
+      @media (max-width: 767px) {
         .container-default {
           padding-left: 16px;
           padding-right: 16px;
@@ -275,22 +422,87 @@
         
         .display-12 {
           font-size: 1.8rem;
-          line-height: 1.1;
+          line-height: 1.2;
         }
         
         .button-primary,
         .secondary-button {
           padding: 12px 20px;
           font-size: 0.9rem;
+          width: 100%;
+          text-align: center;
         }
         
         .logo-wrapper {
           max-width: 120px;
         }
+        
+        /* Enhanced blog mobile styles */
+        .grid-2-columns.blog-post-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+        
+        .blog-post-link {
+          display: block;
+          width: 100%;
+          margin-bottom: 1.5rem;
+        }
+        
+        .image-wrapper.border-radius-24px {
+          margin-bottom: 1rem;
+        }
+        
+        .card-image {
+          width: 100%;
+          height: auto;
+          max-height: 200px;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+        
+        .card-title.display-7 {
+          font-size: 1.3rem;
+          line-height: 1.4;
+          margin-bottom: 1rem;
+        }
+        
+        .flex-horizontal.space-between {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+        
+        .badge.neutral {
+          font-size: 0.8rem;
+          padding: 4px 12px;
+        }
+        
+        .paragraph-medium {
+          font-size: 0.9rem;
+        }
+        
+        .hero-section {
+          padding: 40px 0;
+        }
+        
+        .section-title {
+          font-size: 1.8rem;
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+        
+        .mg-top-24px {
+          margin-top: 16px;
+        }
+        
+        .mg-top-22px {
+          margin-top: 12px;
+        }
       }
       
       /* Small Mobile Phones */
-      @media (max-width: 320px) {
+      @media (max-width: 479px) {
         .container-default {
           padding-left: 12px;
           padding-right: 12px;
@@ -298,20 +510,69 @@
         
         .display-12 {
           font-size: 1.6rem;
-          line-height: 1.1;
+          line-height: 1.2;
         }
         
         .button-primary,
         .secondary-button {
           padding: 10px 16px;
           font-size: 0.85rem;
+          width: 100%;
         }
         
         .logo-wrapper {
           max-width: 100px;
         }
+        
+        /* Ultra-mobile blog optimizations */
+        .card-image {
+          max-height: 180px;
+          border-radius: 16px;
+        }
+        
+        .card-title.display-7 {
+          font-size: 1.2rem;
+          line-height: 1.3;
+        }
+        
+        .section-title {
+          font-size: 1.6rem;
+        }
+        
+        .badge.neutral {
+          font-size: 0.75rem;
+          padding: 3px 10px;
+        }
+        
+        .paragraph-medium {
+          font-size: 0.85rem;
+        }
+        
+        .hero-section {
+          padding: 30px 0;
+        }
       }
-</style>
+      
+      /* Extra Small Devices */
+      @media (max-width: 360px) {
+        .container-default {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        
+        .display-12 {
+          font-size: 1.4rem;
+        }
+        
+        .card-title.display-7 {
+          font-size: 1.1rem;
+        }
+        
+        .card-image {
+          border-radius: 12px;
+        }
+      }
+    </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
         currencyCode: "USD",
@@ -459,7 +720,7 @@
                             src="images/blog1.jpg"
                             alt="How to optimize your company's tax management"
                             class="card-image"
-                            style="width:100%;height:auto;max-width:100%;border-radius:32px;display:block;margin:0 auto;"
+                            style="width:100%;height:auto;max-width:100%;border-radius:32px;display:block;margin:0 auto;object-fit:cover;"
                           />
                         </div></a
                       >
@@ -543,14 +804,14 @@
                         rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
                       opacity: 0;
                     "
-                    href="introduction-to-accounting-basics-for-beginners.html"
+                    href="blog-detailed.html"
                     class="blog-post-link w-inline-block"
                     ><div class="image-wrapper border-radius-24px">
                       <img
                         src="images/blog.png"
                         alt="Buying Property in Kerala as an NRI: Tax and Legal Aspects"
                         class="card-image"
-                        style="width:100%;height:auto;max-width:100%;border-radius:32px;display:block;margin:0 auto;"
+                        style="width:100%;height:auto;max-width:100%;border-radius:32px;display:block;margin:0 auto;object-fit:cover;"
                       />
                     </div>
                     <div class="mg-top-24px">
