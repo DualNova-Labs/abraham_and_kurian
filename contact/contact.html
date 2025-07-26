@@ -983,20 +983,11 @@
         </div>
       </section>
       <!-- Open Hours Section: After Changanacherry Kerala Section -->
-      <div class="open-hours-info-card">
-        <div class="open-hours-inner">
-          <div class="open-hours-content">
-            <div class="open-hours-title">Open Hours</div>
-            <div class="open-hours-days">
-              <span class="open-hours-label">Monday to Friday:</span>
-              <span class="open-hours-time">9.30 am – 5.00 pm</span>
-            </div>
-            <div class="open-hours-days">
-              <span class="open-hours-label">Saturday:</span>
-              <span class="open-hours-time">9.30 am – 1.30 pm</span>
-            </div>
-          </div>
-        </div>
+      <div class="open-hours-plain-section">
+        <div class="open-hours-title">Open Hours</div>
+        <div class="open-hours-days"><span class="open-hours-label">Monday to Friday:</span> <span class="open-hours-time">9.30 am – 5.00 pm</span></div>
+        <div class="open-hours-days"><span class="open-hours-label">Saturday:</span> <span class="open-hours-time">9.30 am – 1.30 pm</span></div>
+        <div class="open-hours-days"><span class="open-hours-label">Sunday:</span> <span class="open-hours-time">Closed</span></div>
       </div>
       <footer class="minimal-footer">
         <div class="footer-container">
@@ -1268,40 +1259,11 @@
       }
     </style>
     <style>
-      .open-hours-info-card {
-        margin: 40px auto 0 auto;
+      .open-hours-plain-section {
+        margin: 18px auto 0 auto;
         max-width: 420px;
-        background: #fff;
-        border-radius: 18px;
-        box-shadow: 0 4px 24px rgba(17,138,126,0.10);
-        border: 1.5px solid #e2f3ee;
-        padding: 32px 32px 28px 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: box-shadow 0.2s;
-      }
-      .open-hours-info-card:hover {
-        box-shadow: 0 8px 32px rgba(17,138,126,0.16);
-      }
-      .open-hours-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-      }
-      .open-hours-icon-wrap {
-        margin-bottom: 12px;
-      }
-      .open-hours-icon {
-        width: 38px;
-        height: 38px;
-        display: block;
-      }
-      .open-hours-content {
         text-align: center;
-        width: 100%;
+        padding-bottom: 10px;
       }
       .open-hours-title {
         font-size: 1.35rem;
@@ -1327,15 +1289,18 @@
         color: #222;
       }
       @media (max-width: 767px) {
-        .open-hours-info-card {
+        .open-hours-plain-section {
+          margin-top: 10px;
           max-width: 98vw;
-          padding: 18px 4vw 14px 4vw;
+          padding: 8px 2vw 8px 2vw;
         }
         .open-hours-title {
           font-size: 1.08rem;
+          margin-bottom: 10px;
         }
         .open-hours-days {
           font-size: 0.98rem;
+          margin-bottom: 5px;
         }
       }
     </style>
