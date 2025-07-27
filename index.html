@@ -92,18 +92,35 @@
       /* Add hover effect to increase glow */
       /* All glow-related CSS has been removed. */
       .logo-wrapper {
-        max-width: 250px;
+        max-width: 180px;
       }
       .logo-wrapper img {
         height: 40px;
         width: 200px;
       }
+      @media (max-width: 991px) {
+        .logo-wrapper {
+          max-width: 180px;
+        }
+      }
       @media (max-width: 767px) {
         .logo-wrapper {
           max-width: 180px;
         }
-        .logo-wrapper img {
-          height: 60px;
+      }
+      @media screen and (min-width: 430px) and (max-width: 756px) {
+        .logo-wrapper {
+          max-width: 140px;
+        }
+      }
+      @media (max-width: 375px) {
+        .logo-wrapper {
+          max-width: 120px;
+        }
+      }
+      @media (max-width: 320px) {
+        .logo-wrapper {
+          max-width: 100px;
         }
       }
     </style>
