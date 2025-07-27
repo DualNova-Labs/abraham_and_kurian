@@ -103,7 +103,17 @@
         hideDecimalForWholeNumbers: false,
       };
     </script>
-  </head>
+    <!-- Scroll to Top Button Styles -->
+  <style>
+    .scroll-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:#045238;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(110,231,183,.3);transition:all .3s ease;z-index:1000;opacity:0;visibility:hidden;transform:translateY(20px);}  
+    .scroll-to-top.show{opacity:1;visibility:visible;transform:translateY(0);}  
+    .scroll-to-top:hover{background:#077c59;box-shadow:0 6px 25px rgba(110,231,183,.4);transform:translateY(-2px);}  
+    .scroll-to-top svg{width:24px;height:24px;stroke:#fff;fill:none;transition:transform .3s ease;}  
+    .scroll-to-top:hover svg{transform:translateY(-1px);}  
+    @media(max-width:767px){.scroll-to-top{bottom:20px;right:20px;width:45px;height:45px;}.scroll-to-top svg{width:20px;height:20px;}}  
+    @media(max-width:479px){.scroll-to-top{bottom:15px;right:15px;width:40px;height:40px;}.scroll-to-top svg{width:18px;height:18px;}}  
+  </style>
+</head>
   <body>
     <div class="page-wrapper">
       <div
@@ -435,5 +445,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/webflow.b2af9cb86.js" type="text/javascript"></script>
-  </body>
+    <!-- Scroll to Top Button Functionality -->
+  <script>
+    (function(){
+      const btn=document.getElementById('scrollToTop');
+      if(!btn)return;
+      function toggle(){window.pageYOffset>300?btn.classList.add('show'):btn.classList.remove('show');}
+      function topSmooth(){window.scrollTo({top:0,behavior:'smooth'});}  
+      window.addEventListener('scroll',toggle,{passive:true});
+      btn.addEventListener('click',topSmooth);
+      window.addEventListener('load',toggle);
+    })();
+  </script>
+</body>
 </html>
