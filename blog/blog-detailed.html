@@ -90,6 +90,25 @@
       .w-webflow-badge {
         display: none !important;
       }
+      .logo-glow {
+        filter: drop-shadow(0 0 8px rgba(110, 231, 183, 0.6));
+        animation: pulse-glow 2s infinite alternate;
+        transition: all 0.3s ease;
+        height: 40px;
+        width: 200px;
+      }
+      .logo-wrapper {
+        max-width: 180px;
+      }
+      @media (max-width: 991px) {
+        .logo-wrapper { max-width: 140px; }
+      }
+      @media (max-width: 375px) {
+        .logo-wrapper { max-width: 120px; }
+      }
+      @media (max-width: 320px) {
+        .logo-wrapper { max-width: 100px; }
+      }
     </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
