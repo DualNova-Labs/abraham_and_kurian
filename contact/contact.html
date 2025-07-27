@@ -982,6 +982,13 @@
           </div>
         </div>
       </section>
+      <!-- Open Hours Section: After Changanacherry Kerala Section -->
+      <div class="open-hours-plain-section">
+        <div class="open-hours-title">Open Hours</div>
+        <div class="open-hours-days"><span class="open-hours-label">Monday to Friday:</span> <span class="open-hours-time">9.30 am – 5.00 pm</span></div>
+        <div class="open-hours-days"><span class="open-hours-label">Saturday:</span> <span class="open-hours-time">9.30 am – 1.30 pm</span></div>
+        <div class="open-hours-days"><span class="open-hours-label">Sunday:</span> <span class="open-hours-time">Closed</span></div>
+      </div>
       <footer class="minimal-footer">
         <div class="footer-container">
           <div class="footer-logo-row">
@@ -1218,6 +1225,82 @@
         }
         .footer-logo-img {
           height: 38px;
+        }
+      }
+    </style>
+    <style>
+      .open-hours-row {
+        margin-top: 2px;
+        display: flex;
+        align-items: flex-start;
+        font-size: 1.08rem;
+        color: #222;
+      }
+      .open-hours-title {
+        font-weight: 600;
+        color: #118a7e;
+        font-size: 1.08rem;
+      }
+      .open-hours-text {
+        line-height: 1.5;
+        font-size: 1.08rem;
+        color: #222;
+      }
+      @media (max-width: 767px) {
+        .open-hours-row {
+          font-size: 1rem;
+        }
+        .open-hours-title {
+          font-size: 1rem;
+        }
+        .open-hours-text {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <style>
+      .open-hours-plain-section {
+        margin: 18px auto 0 auto;
+        max-width: 420px;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .open-hours-title {
+        font-size: 1.35rem;
+        font-weight: 800;
+        color: #118a7e;
+        margin-bottom: 14px;
+        letter-spacing: 0.01em;
+      }
+      .open-hours-days {
+        margin-bottom: 7px;
+        font-size: 1.08rem;
+        color: #222;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+      }
+      .open-hours-label {
+        font-weight: 600;
+        color: #118a7e;
+      }
+      .open-hours-time {
+        font-weight: 500;
+        color: #222;
+      }
+      @media (max-width: 767px) {
+        .open-hours-plain-section {
+          margin-top: 10px;
+          max-width: 98vw;
+          padding: 8px 2vw 8px 2vw;
+        }
+        .open-hours-title {
+          font-size: 1.08rem;
+          margin-bottom: 10px;
+        }
+        .open-hours-days {
+          font-size: 0.98rem;
+          margin-bottom: 5px;
         }
       }
     </style>
