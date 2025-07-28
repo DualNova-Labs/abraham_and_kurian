@@ -65161,7 +65161,7 @@ Arguments: ` +
               ? (N.el.on("setting" + c, W(N)), X(N), (N.hasTimer = !1))
               : (N.el.on("swipe" + c, W(N)),
                 N.left.on("click" + c, w(N)),
-                N.right.on("click" + c, V(N)),
+                N.right.on("click" + c, w(N)),
                 N.left.on("keydown" + c, L(N, w)),
                 N.right.on("keydown" + c, L(N, V)),
                 N.nav.on("keydown" + c, "> div", W(N)),
