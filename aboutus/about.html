@@ -747,7 +747,7 @@
                 "
               >
                 <div class="display-12 bold text-neutral-100">
-                  1K<span class="text-color-primary-1">+</span>
+                  1<span class="text-color-primary-1">K+</span>
                 </div>
                 <div class="mg-top-6px">
                   <div class="paragraph-large text-neutral-300">
@@ -770,7 +770,7 @@
                 "
               >
                 <div class="display-12 bold text-neutral-100">
-                  25<span class="text-color-primary-1"></span>
+                  25<span class="text-color-primary-1">+</span>
                 </div>
                 <div class="mg-top-6px">
                   <div class="paragraph-large text-neutral-300">
@@ -1002,33 +1002,30 @@
           </div>
           
           <!-- Tools Cards Container -->
-          <div class="tools-cards-container">
+          <div class="tools-categories-container">
             <!-- Accounting Software Card -->
-            <div class="tools-card">
-              <h3 class="tools-card-title">Accounting Software</h3>
+            <div class="tool-category" data-category="accounting">
+              <h3 class="tool-category-title">Accounting Software</h3>
               <div class="tools-tags-container">
                 <div class="tool-tag">Tally</div>
-                <div class="tool-tag">Zoho</div>
-                <div class="tool-tag">Quick Books</div>
-                <div class="tool-tag">Xero</div>
-              </div>
-            </div>
-            
-            <!-- AI Tools Card -->
-            <div class="tools-card">
-              <h3 class="tools-card-title">AI Tools</h3>
-              <div class="tools-tags-container">
-                <div class="tool-tag">Zoho</div>
-                <div class="tool-tag">Xero</div>
                 <div class="tool-tag">QuickBooks</div>
+                <div class="tool-tag">Zoho</div>
+                <div class="tool-tag">Xero</div>
               </div>
             </div>
-            
-            <!-- ERP & Compliance Tools Card -->
-            <div class="tools-card">
-              <h3 class="tools-card-title">ERP & Compliance Tools</h3>
+            <div class="tool-category" data-category="ai">
+              <h3 class="tool-category-title">AI Tools</h3>
               <div class="tools-tags-container">
-                <div class="tool-tag">Winman (GST, Income Tax, TDS)</div>
+                <div class="tool-tag">QuickBooks</div>
+                <div class="tool-tag">Zoho</div>
+                <div class="tool-tag">Xero</div>
+              </div>
+            </div>
+            <div class="tool-category" data-category="erp">
+              <h3 class="tool-category-title">ERP & Compliance Tools</h3>
+              <div class="tools-tags-container">
+                <div class="tool-tag">Winman(GST,Income Tax,TDS)</div>
+
               </div>
             </div>
           </div>
@@ -1491,26 +1488,197 @@
       }
     </style>
     <style>
-    /* Styles for TECHNOLOGY & TOOLS Section */
-    .tools-cards-container {
+    /* Professional Green Theme for TECHNOLOGY & TOOLS Section */
+    .tech-tools-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 25px;
+      background: linear-gradient(135deg, #f8fcf8 0%, #f0f8f0 100%);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(46, 125, 50, 0.08);
+    }
+    
+    .tech-tools-section .text-uppercase {
+      color: #1b5e20;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+    
+    .tech-tools-section .accent-top-line {
+      background: #4caf50;
+      height: 4px;
+      width: 60px;
+      margin: 0 auto 20px;
+      border-radius: 2px;
+    }
+
+    .tools-categories-container {
       display: flex;
-      flex-wrap: nowrap;
-      gap: 30px;
-      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+      justify-content: space-between;
+    }
+
+    .tool-category {
+      flex: 1;
+      min-width: 280px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border-top: 4px solid #4caf50;
+    }
+
+    .tool-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(46, 125, 50, 0.12);
+    }
+
+    .tool-category[data-category="accounting"] {
+      border-top-color: #2e7d32;
+    }
+
+    .tool-category[data-category="ai"] {
+      border-top-color: #43a047;
+    }
+
+    .tool-category[data-category="erp"] {
+      border-top-color: #388e3c;
+    }
+
+    .tool-category-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1b5e20;
+      margin: 0 0 25px 0;
+      padding-bottom: 15px;
+      position: relative;
+      display: block;
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+
+    .tool-category-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #a5d6a7;
+      border-radius: 2px;
+    }
+
+    .tools-tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-top: 20px;
     }
 
-    .tools-card {
-      background-color: #ffffff;
+    .tool-tag {
+      background: #e8f5e9;
+      border: 1px solid #c8e6c9;
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      padding: 40px 30px;
-      flex: 1;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2e7d32;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: nowrap;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .tool-tag:hover {
+      background: #c8e6c9;
+      color: #1b5e20;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(46, 125, 50, 0.1);
+    }
+
+    /* Removed emoji icons from category titles */
+
+    /* Responsive Design */
+    @media (max-width: 1200px) {
+      .tech-tools-section {
+        margin: 0 20px;
+        width: auto;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .tools-categories-container {
+        gap: 30px;
+      }
+      
+      .tool-category {
+        flex: 1 1 calc(50% - 20px);
+        min-width: auto;
+        padding: 25px;
+      }
+      
+      .tool-category-title {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .tech-tools-section {
+        padding: 60px 20px;
+      }
+      
+      .tool-category {
+        flex: 1 1 100%;
+        padding: 25px 20px;
+      }
+      
+      .tools-tags-container {
+        gap: 10px;
+      }
+      
+      .tool-tag {
+        padding: 7px 16px;
+        font-size: 13.5px;
+      }
+    }
+
+    @media (max-width: 479px) {
+      .tech-tools-section {
+        padding: 50px 15px;
+        margin: 0 10px;
+        border-radius: 12px;
+      }
+      
+      .tools-categories-container {
+        gap: 25px;
+        margin-top: 30px;
+      }
+      
+      .tool-category {
+        padding: 20px 15px;
+      }
+      
+      .tool-category-title {
+        font-size: 19px;
+        margin-bottom: 20px;
+      }
+      
+      .tools-tags-container {
+        justify-content: center;
+        gap: 8px;
+      }
+      
+      .tool-tag {
+        padding: 6px 14px;
+        font-size: 13px;
+      }
+    }
     }
 
     .tools-card:hover {
