@@ -186,6 +186,27 @@
         margin-bottom: 70px;
       }
       
+      /* Adjust specific card title positioning */
+      #w-node-cbf58a7b-fa69-6b34-720f-5dbbfc5882b6-6b8c3950 .card-title {
+        margin-top: 12px;
+        padding-top: 8px;
+      }
+      
+      /* Adjust specific card paragraph positioning */
+      #w-node-cbf58a7b-fa69-6b34-720f-5dbbfc5882b6-6b8c3950 .paragraph-large {
+        margin-top: 32px;
+      }
+      
+      /* Adjust investment management card positioning */
+      #w-node-ac20b9c4-cdc3-43ab-b4bb-485738822747-6b8c3950 .card-title {
+        margin-top: 12px;
+        padding-top: 8px;
+      }
+      
+      #w-node-ac20b9c4-cdc3-43ab-b4bb-485738822747-6b8c3950 .paragraph-large {
+        margin-top: 32px;
+      }
+      
       /* Mobile responsive adjustments */
       @media (max-width: 768px) {
         .card.successful-case-horizontal-card,
@@ -202,10 +223,45 @@
         .successful-case-horizontal-card .successful-case-pd---content-right {
           min-height: auto;
           padding: 20px;
+          position: static;
         }
         
         .successful-case-horizontal-card .card-title {
+          height: auto;
           min-height: auto;
+          margin-top: 0;
+          padding-top: 0;
+          margin-bottom: 16px;
+        }
+        
+        .successful-case-horizontal-card .paragraph-large {
+          height: auto;
+          overflow: visible;
+          margin-top: 0;
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+        
+        .successful-case-horizontal-card .link-text-and-icon {
+          position: static;
+          margin-top: 16px;
+          height: auto;
+        }
+        
+        .successful-case-horizontal-card .mg-top-6px {
+          margin-bottom: 20px;
+        }
+        
+        /* Reset specific card adjustments for mobile */
+        #w-node-cbf58a7b-fa69-6b34-720f-5dbbfc5882b6-6b8c3950 .card-title,
+        #w-node-ac20b9c4-cdc3-43ab-b4bb-485738822747-6b8c3950 .card-title {
+          margin-top: 0;
+          padding-top: 0;
+        }
+        
+        #w-node-cbf58a7b-fa69-6b34-720f-5dbbfc5882b6-6b8c3950 .paragraph-large,
+        #w-node-ac20b9c4-cdc3-43ab-b4bb-485738822747-6b8c3950 .paragraph-large {
+          margin-top: 0;
         }
       }
     </style>
