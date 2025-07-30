@@ -115,6 +115,31 @@
         display: none !important;
   }
   
+  /* Logo glow effect */
+  .logo-glow {
+    filter: drop-shadow(0 0 8px rgba(110, 231, 183, 0.6));
+    animation: pulse-glow 2s infinite alternate;
+    transition: all 0.3s ease;
+    height: auto;
+    width: 100%;
+    max-width: 188px;
+    max-height: 80px;
+  }
+  
+  @keyframes pulse-glow {
+    0% {
+      filter: drop-shadow(0 0 5px rgba(110, 231, 183, 0.4));
+    }
+    100% {
+      filter: drop-shadow(0 0 15px rgba(110, 231, 183, 0.7));
+    }
+  }
+  
+  /* Add hover effect to increase glow */
+  .logo-link:hover .logo-glow {
+    filter: drop-shadow(0 0 18px rgba(110, 231, 183, 0.9));
+  }
+  
   /* Contact form styles */
   .contact-from-wrapper {
     width: 100%;
