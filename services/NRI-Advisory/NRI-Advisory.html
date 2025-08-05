@@ -1153,6 +1153,8 @@
           .footer-nav {
             gap: 14px;
             font-size: 0.95rem;
+            justify-content: center;
+            flex-wrap: wrap;
           }
           
           .footer-logo-img {
@@ -1306,7 +1308,10 @@
         /* Touch-friendly improvements */
         @media (hover: none) and (pointer: coarse) {
           /* Increase tap target sizes for mobile */
-          .footer-link, 
+          .footer-link {
+            padding: 4px 0;
+          }
+          
           .header-nav-link,
           .button-primary {
             padding: 12px 16px;
