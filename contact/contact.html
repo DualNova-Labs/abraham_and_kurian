@@ -115,6 +115,31 @@
         display: none !important;
   }
   
+  /* Logo glow effect */
+  .logo-glow {
+    filter: drop-shadow(0 0 8px rgba(110, 231, 183, 0.6));
+    animation: pulse-glow 2s infinite alternate;
+    transition: all 0.3s ease;
+    height: auto;
+    width: 100%;
+    max-width: 188px;
+    max-height: 80px;
+  }
+  
+  @keyframes pulse-glow {
+    0% {
+      filter: drop-shadow(0 0 5px rgba(110, 231, 183, 0.4));
+    }
+    100% {
+      filter: drop-shadow(0 0 15px rgba(110, 231, 183, 0.7));
+    }
+  }
+  
+  /* Add hover effect to increase glow */
+  .logo-link:hover .logo-glow {
+    filter: drop-shadow(0 0 18px rgba(110, 231, 183, 0.9));
+  }
+  
   /* Contact form styles */
   .contact-from-wrapper {
     width: 100%;
@@ -439,7 +464,7 @@
                 <a
                   id="w-node-e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c-36bfab9c"
                   data-w-id="e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c"
-                  href="/contact-page/contact-v1"
+                  href="contact.html"
                   class="button-primary w-inline-block"
                   ><div>Contact us</div>
                   <div class="item-icon-right">
@@ -665,7 +690,10 @@
                     <div class="mg-top-12px">
                       <div class="text-neutral-800">
                         <div class="paragraph-large extra-bold">
-                          0469–2601291 / 2702391 / 2971291
+                          Thiruvalla: 0469–2601291 / 2702391 / 2971291
+                        </div>
+                        <div class="paragraph-large extra-bold">
+                          Changanacherry: 0481-2422053. Mob.62821 50575
                         </div>
                       </div>
                     </div>
@@ -690,7 +718,10 @@
                     <div class="mg-top-12px">
                       <div class="text-neutral-800">
                         <div class="paragraph-large extra-bold">
-                          abrahamnkurian@gmail.com
+                          Thiruvalla: abrahamnkurian@gmail.com
+                        </div>
+                        <div class="paragraph-large extra-bold">
+                          Changanacherry: antony.fca@gmail.com
                         </div>
                       </div>
                     </div>
@@ -944,7 +975,7 @@
                                     alt="Email Icon"
                                   />
                                 </div>
-                                <div>abrahamnkurian@gmail.com</div>
+                                <div>antony.fca@gmail.com</div>
                               </div>
                               <div
                                 id="w-node-_6a53ac94-4d33-1c97-9970-c567ed869d6d-646ec0ef"
@@ -957,7 +988,7 @@
                                     alt="Phone Icon"
                                   />
                                 </div>
-                                <div>0481-2422053</div>
+                                <div>0481-2422053&nbsp;/&nbsp;Mob.6282150575</div>
                               </div>
                               <div
                                 id="w-node-_6a53ac94-4d33-1c97-9970-c567ed869d71-646ec0ef"

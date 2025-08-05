@@ -121,8 +121,10 @@
         max-width: 180px;
       }
       .logo-wrapper img {
-        height: 40px;
-        width: 200px;
+        height: auto;
+        width: 100%;
+        max-width: 188px;
+        max-height: 80px;
       }
       @media (max-width: 991px) {
         .logo-wrapper {
@@ -290,6 +292,21 @@
           margin-top: 0;
         }
       }
+      
+      /* Override hero section background to Caribbean green */
+      .section.hero.v2,
+      .bg-primary-200 {
+        background-color: #EAF6FF !important;
+      }
+      
+      /* Navigation link hover effect */
+      .header-nav-link {
+        transition: color 0.3s ease;
+      }
+      
+      .header-nav-link:hover {
+        color: #00C851 !important;
+      }
     </style>
     <script type="text/javascript">
       window.__WEBFLOW_CURRENCY_SETTINGS = {
@@ -329,7 +346,7 @@
                     class="logo-link w-inline-block"
                   >
                     <img
-                      src="images/new_logo_orange.png"
+                      src="images/orange2.png"
                       alt="Logo Web White - Accountant X Webflow Template"
                     />
                   </a>
@@ -339,26 +356,26 @@
                     <li class="link-nav-item">
                       <a
                         href="index.html"
-                        class="header-nav-link white"
+                        class="header-nav-link" style="color: black;"
                         >Home</a
                       >
                     </li>
                     <li class="link-nav-item">
-                      <a href="aboutus/about.html" class="header-nav-link white">About</a>
+                      <a href="aboutus/about.html" class="header-nav-link" style="color: black;">About</a>
                     </li>
                     <li class="link-nav-item">
-                      <a href="aboutus/team/team.html" class="header-nav-link white">Team</a>
+                      <a href="aboutus/team/team.html" class="header-nav-link" style="color: black;">Team</a>
                     </li>
                     <li class="link-nav-item">
-                      <a href="services/services.html" class="header-nav-link white">Services</a>
+                      <a href="services/services.html" class="header-nav-link" style="color: black;">Services</a>
                     </li>
                     <li class="link-nav-item">
-                      <a href="careers/careers.html" class="header-nav-link white"
+                      <a href="careers/careers.html" class="header-nav-link" style="color: black;"
                         >Careers</a
                       >
                     </li>
                     <li class="link-nav-item">
-                      <a href="blog/blog.html" class="header-nav-link white">Blog</a>
+                      <a href="blog/blog.html" class="header-nav-link" style="color: black;">Blog</a>
                     </li>
                     <li class="link-nav-item show-on-mobile">
                       <a
@@ -574,7 +591,7 @@
                                     type="text/x-wf-template"
                                     id="wf-template-f236813d-b424-688b-c4d9-350a9f1be4dd"
                                   >
-                                    %3Cli%20class%3D%22pd-left-0px%22%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%5D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%7D%255D%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%7D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3C%2Fli%3E
+                                    %3Cli%20class%3D%22pd-left-0px%22%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522PlainText%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D.name%2522%257D%7D%255D%22%3E%3C%2Fspan%3E%3Cspan%3E%3A%20%3C%2Fspan%3E%3Cspan%20data-wf-bindings%3D%22%255B%257B%2522innerHTML%2522%253A%257B%2522type%2522%253A%2522CommercePropValues%2522%252C%2522filter%2522%253A%257B%2522type%2522%253A%2522identity%2522%252C%2522params%2522%253A%255B%255D%257D%252C%2522dataPath%2522%253A%2522database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr%255B%255D%2522%257D%7D%255D%22%20class%3D%22w-dyn-bind-empty%22%3E%3C%2Fspan%3E%3C%2Fli%3E
                                   </script>
                                   <ul
                                     data-wf-bindings="%5B%7B%22optionSets%22%3A%7B%22type%22%3A%22CommercePropTable%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%255B%255D.product.f_sku_properties_3dr[]%22%7D%7D%2C%7B%22optionValues%22%3A%7B%22type%22%3A%22CommercePropValues%22%2C%22filter%22%3A%7B%22type%22%3A%22identity%22%2C%22params%22%3A%5B%5D%7D%2C%22dataPath%22%3A%22database.commerceOrder.userItems%255B%255D.sku.f_sku_values_3dr%22%7D%7D%5D"
@@ -840,7 +857,7 @@
             >
               <div class="vertical-line-decoration hero"></div>
               <div class="inner-container _844px _100-tablet">
-                <h1 class="display-12 text-neutral-100">
+                <h1 class="display-12" style="color: black;">
                   Expert solutions for financial success
                 </h1>
               </div>
@@ -864,7 +881,7 @@
                     class="mg-left-content-hero-v2"
                   >
                     <div class="inner-container _440px">
-                      <p class="paragraph-large text-neutral-200">
+                      <p class="paragraph-large" style="color: black;">
                         Abraham & Kurian is a leading Chartered Accountancy firm providing expert financial planning, tax filing, bookkeeping, and audit services for businesses and individuals.
                       </p>
                     </div>
@@ -1050,6 +1067,61 @@
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+              <div
+                class="w-layout-grid grid-1-column trusted-experts-content-right"
+              >
+                <div
+                  id="w-node-dd141417-d0d4-219e-17c4-7f08f12f79b1-6b8c3950"
+                  data-w-id="dd141417-d0d4-219e-17c4-7f08f12f79b1"
+                  style="
+                    -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="inner-container _550px _100-mbl"
+                >
+                  <p class="paragraph-large">
+                  </p>
+                </div>
+                <div
+                  id="w-node-dd141417-d0d4-219e-17c4-7f08f12f79ad-6b8c3950"
+                  data-w-id="dd141417-d0d4-219e-17c4-7f08f12f79ad"
+                  style="
+                    -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
+                      rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
+                    opacity: 0;
+                  "
+                  class="image-wrapper border-radius-24px"
+                >
+                  <img
+                    src="images/home2.jpg"
+                    alt="Trusted Experts Three Person - Accountant X Webflow Template"
+                    sizes="(max-width: 479px) 92vw, (max-width: 767px) 100vw, (max-width: 1439px) 45vw, (max-width: 5060px) 46vw, 2328px"
+                    srcset="
+                      images/home2.jpg   500w,
+                      images/home2.jpg   800w,
+                      images/home2.jpg 1080w,
+                      images/home2.jpg        2328w
+                    "
+                    class="image"
+                  />
+                </div>
+              </div>
+>>>>>>> 70e96c66cd029c975018bc570860a02a3ee12f05
             </div>
           </div>
         </div>
@@ -1354,199 +1426,6 @@
           </div>
         </div>
       </section>
-      <section class="section overflow-hidden" style="padding: 40px 0;">
-        <div class="w-layout-blockcontainer container-default w-container">
-          <div class="mg-bottom-48px">
-            <div
-              data-w-id="f80b06ad-09a9-10ca-150b-664069823b5c"
-              style="
-                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="title-left---content-right"
-            >
-              <div
-                data-w-id="f80b06ad-09a9-10ca-150b-664069823b5d"
-                style="
-                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                    rotateY(0) rotateZ(0) skew(0, 0);
-                  opacity: 0;
-                "
-                class="line-left---content"
-              >
-                <div class="vertical-line-decoration section-line"></div>
-                <div class="inner-container _440px">
-                  <h2 class="display-10">Our successful case studies</h2>
-                </div>
-              </div>
-              <div class="inner-container _520px">
-                <p class="paragraph-large">
-                  Discover how Abraham & Kurian has helped businesses overcome financial challenges, 
-                  optimize their tax strategies, and achieve sustainable growth through our expert services.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="mg-top-32px">
-            <div class="inner-container _1186px center">
-              <div
-                data-delay="4000"
-                data-animation="outin"
-                class="slider-wrapper buttons-bottom-center---mbl arrows-center w-slider"
-                data-autoplay="false"
-                data-easing="ease"
-                style="opacity: 0"
-                data-hide-arrows="false"
-                data-disable-swipe="false"
-                data-w-id="38a909a6-5bb3-6139-7f38-df9754633b5b"
-                data-autoplay-limit="0"
-                data-nav-spacing="3"
-                data-duration="500"
-                data-infinite="true"
-              >
-                <div class="slider-mask overflow-visible w-slider-mask">
-                  <div class="w-slide">
-                    <a
-                      data-w-id="cbf58a7b-fa69-6b34-720f-5dbbfc5882b3"
-                      href="services/services.html"
-                      class="card successful-case-horizontal-card w-inline-block"
-                    >
-                      <div class="image-wrapper">
-                        <img
-                          src="images/index1.png"
-                          alt="Tax strategy optimization for venture capital firm"
-                          class="card-image _w-h-100"
-                        />
-                      </div>
-                      <div
-                        id="w-node-cbf58a7b-fa69-6b34-720f-5dbbfc5882b6-6b8c3950"
-                        class="successful-case-pd---content-right"
-                      >
-                        <div>
-                          <h3 class="card-title display-7">
-                            Optimizing Venture's tax strategy with expert CA solutions
-                          </h3>
-                          <div class="mg-top-6px">
-                            <p class="paragraph-large text-neutral-700">
-                              We helped Venture enhance tax efficiency through smart planning, 
-                              regulatory compliance, and streamlined financial structuring.
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="link-text-and-icon bold text-color-primary-1---no-hover"
-                        >
-                          <div>Read case study</div>
-                          <div class="item-icon-right">
-                            <div class="icon-font-rounded"></div>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-left:6px;"><path d="M6 3l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="w-slide">
-                    <a
-                      data-w-id="ac20b9c4-cdc3-43ab-b4bb-485738822744"
-                      href="services/services.html"
-                      class="card successful-case-horizontal-card w-inline-block"
-                    >
-                      <div class="image-wrapper">
-                        <img
-                          src="images/index2.png"
-                          alt="Investment management and financial guidance for organization"
-                          class="card-image _w-h-100"
-                        />
-                      </div>
-                      <div
-                        id="w-node-ac20b9c4-cdc3-43ab-b4bb-485738822747-6b8c3950"
-                        class="successful-case-pd---content-right"
-                      >
-                        <div>
-                          <h3 class="card-title display-7">
-                            We help Organization manage its investments
-                            successfully
-                          </h3>
-                          <div class="mg-top-6px">
-                            <p class="paragraph-large text-neutral-700">
-                              Our team developed a comprehensive investment management strategy
-                              for Organization, providing ongoing financial guidance and audit support
-                              that resulted in improved returns and stronger regulatory compliance.
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="link-text-and-icon bold text-color-primary-1---no-hover"
-                        >
-                          <div>Read case study</div>
-                          <div class="item-icon-right">
-                            <div class="icon-font-rounded"></div>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-left:6px;"><path d="M6 3l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div
-                  class="secondary-button-icon large slider-button-left---center-mbl w-slider-arrow-left"
-                >
-                  <div class="icon-font-rounded"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M12 3L6 9l6 6" stroke="#0F766E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                </div>
-                <div
-                  class="primary-button-icon large slider-button-right---center-mbl w-slider-arrow-right"
-                >
-                  <div class="icon-font-rounded"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M6 3l6 6-6 6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                </div>
-                <div class="hidden w-slider-nav w-round w-num"></div>
-              </div>
-            </div>
-          </div>
-          <div class="mg-top-56px">
-            <div
-              data-w-id="1dcbe4c5-5d77-8741-d8a6-8604c9238e2a"
-              style="
-                -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                  rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                  rotateY(0) rotateZ(0) skew(0, 0);
-                opacity: 0;
-              "
-              class="buttons-row"
-            >
-              <a
-                id="w-node-e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c-36bfab9c"
-                data-w-id="e9da5fd6-ab44-5b2f-81ad-6e5f36bfab9c"
-                href="contact/contact.html"
-                class="button-primary w-inline-block"
-              >
-                <div>Contact us</div>
-                <div class="item-icon-right">
-                  <div class="base-icon-font"></div>
-                  <!-- <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-left:6px;"><path d="M6 3l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> -->
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="section pd-200px overflow-hidden">
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="slider-right-container">
@@ -1696,7 +1575,7 @@
             <a href="contact/contact.html" class="footer-link">Contact</a>
           </nav>
           <div class="footer-copyright">
-            <div>© 2025 Abraham & Kurian. All rights reserved.</div>
+            <div> 2025 Abraham & Kurian. All rights reserved.</div>
             <div class="footer-terms">
               <a href="#" class="footer-terms-link">Privacy Policy</a>
               <span class="footer-separator">|</span>
@@ -1743,7 +1622,7 @@
           transition: color 0.2s;
         }
         .footer-link:hover {
-          color: #6ee7b7;
+          color: #00CC99;
         }
         .footer-copyright {
           font-size: 0.95rem;
@@ -2172,7 +2051,6 @@
             display: block !important;
             border-radius: 16px !important;
             overflow: hidden !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
           }
           
           .section.pd-bottom-200px .image-wrapper.border-radius-24px .image {
@@ -2180,7 +2058,6 @@
             height: 250px !important;
             object-fit: cover !important;
             border-radius: 16px !important;
-            transition: transform 0.3s ease !important;
           }
           
           /* Text content for large phones */
