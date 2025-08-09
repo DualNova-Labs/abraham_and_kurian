@@ -918,6 +918,17 @@
 
                                 </div>
                               </div>
+                              <!-- Mobile Office Image for Head Office -->
+                              <div class="mobile-office-image" id="head-office-mobile-image">
+                                <div class="image-wrapper border-radius-26px">
+                                  <img
+                                    sizes="(max-width: 991px) 100vw, (max-width: 1439px) 57vw, (max-width: 1919px) 58vw, 59vw"
+                                    src="images/main branch.jpg"
+                                    alt="Thiruvalla Office - Abraham & Kurian"
+                                    class="image cover-image"
+                                  />
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1011,6 +1022,17 @@
 
                                 </div>
 
+                              </div>
+                              <!-- Mobile Office Image for Changanacherry -->
+                              <div class="mobile-office-image" id="changanacherry-mobile-image">
+                                <div class="image-wrapper border-radius-26px">
+                                  <img
+                                    sizes="(max-width: 991px) 100vw, (max-width: 1439px) 57vw, (max-width: 1919px) 58vw, 59vw"
+                                    src="images/branch.webp"
+                                    alt="Changanacherry Office - Abraham & Kurian"
+                                    class="image cover-image"
+                                  />
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1379,6 +1401,50 @@
         .open-hours-days {
           font-size: 0.98rem;
           margin-bottom: 5px;
+        }
+      }
+    </style>
+    <style>
+      /* Mobile Office Images - Show only on mobile */
+      .mobile-office-image {
+        display: none;
+        margin-top: 20px;
+      }
+      
+      /* Hide original tab content on mobile, show mobile images */
+      @media screen and (max-width: 767px) {
+        .mobile-office-image {
+          display: block;
+        }
+        
+        .w-tab-content {
+          display: none !important;
+        }
+        
+        /* Ensure accordion content is properly styled */
+        .accordion-bottom {
+          padding-bottom: 20px;
+        }
+        
+        .mobile-office-image .image-wrapper {
+          margin-top: 15px;
+        }
+        
+        .mobile-office-image .image {
+          border-radius: 16px;
+          width: 100%;
+          height: auto;
+        }
+      }
+      
+      /* Show tab content on desktop, hide mobile images */
+      @media screen and (min-width: 768px) {
+        .mobile-office-image {
+          display: none !important;
+        }
+        
+        .w-tab-content {
+          display: block;
         }
       }
     </style>
