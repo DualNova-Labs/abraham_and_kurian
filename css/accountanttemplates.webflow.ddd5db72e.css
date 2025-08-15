@@ -11863,7 +11863,7 @@ figcaption {
   }
 
   .mg-left-content-hero-v2 .paragraph-large {
-    text-align: justify !important;
+    text-align: left !important;
     line-height: 1.6 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
