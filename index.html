@@ -2979,8 +2979,26 @@
           }
           
           .scroll-to-top svg {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
+          }
+          
+          /* Left align hero heading on mobile */
+          .display-12 {
+            text-align: left !important;
+          }
+          
+          /* Stretch hero buttons to right side */
+          .buttons-row.left {
+            justify-content: flex-end !important;
+            align-items: stretch !important;
+            width: 100% !important;
+          }
+          
+          .buttons-row.left a {
+            flex: 1 !important;
+            max-width: none !important;
+            text-align: center !important;
           }
         }
         
