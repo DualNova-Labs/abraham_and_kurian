@@ -446,6 +446,58 @@
           color: #bbb;
         }
         
+        /* Add hover effect to increase glow */
+        .logo-link:hover .logo-glow {
+          filter: drop-shadow(0 0 18px rgba(110, 231, 183, 0.9));
+        }
+        
+        /* Mobile Navigation Improvements - Seamless Menu */
+        @media (max-width: 991px) {
+          .nav-menu-wrapper {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 0px;
+            margin-top: 0px;
+            border: none;
+            outline: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          }
+          
+          .header-nav-link {
+            color: #333 !important;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-bottom: 1px solid #f0f0f0;
+          }
+          
+          .header-nav-link:hover {
+            color: #6ee7b7 !important;
+            background: #f8f9fa;
+          }
+          
+          .hamburger-menu {
+            background: transparent;
+            border: none;
+            padding: 8px;
+          }
+          
+          .hamburger-menu-line {
+            background: #333;
+            height: 3px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+          }
+          
+          .w-nav-button {
+            background: transparent !important;
+            border: none !important;
+          }
+          
+          .hamburger-menu-flex {
+            gap: 4px;
+          }
+        }
+        
         /* New styles for improved layout */
         .subtitle-text {
           font-size: 1.2rem;

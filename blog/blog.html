@@ -153,13 +153,40 @@
         .hamburger-menu {
           background: transparent;
           border: none;
-          padding: 8px;
+          padding: 10px;
+        }
+
+        .hamburger-menu-line {
+          background-color: #333;
+          height: 3px;
+          border-radius: 2px;
+          transition: all 0.3s ease;
         }
         
         .w-nav-button {
           background: transparent !important;
           border: none !important;
         }
+
+        .hamburger-menu-flex {
+          gap: 4px;
+        }
+      }
+
+      /* Logo hover effect */
+      .logo-link:hover .logo-glow {
+        filter: drop-shadow(0 0 20px rgba(110, 231, 183, 0.6));
+        transition: filter 0.3s ease;
+      }
+
+      /* Responsive images */
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container-default {
+        max-width: 100%;
       }
 
       /* Mobile Responsive Styles */
