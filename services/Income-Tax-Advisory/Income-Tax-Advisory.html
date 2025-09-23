@@ -450,6 +450,45 @@
           filter: drop-shadow(0 0 18px rgba(110, 231, 183, 0.9));
         }
         
+        /* Logo sizing - matching index.html */
+        .logo-wrapper {
+          max-width: 320px !important;
+        }
+        .logo-wrapper._188px {
+          max-width: 320px !important;
+        }
+        .logo-wrapper img {
+          height: auto;
+          width: 100%;
+          max-width: 320px;
+          max-height: 140px;
+        }
+        @media (max-width: 991px) {
+          .logo-wrapper, .logo-wrapper._188px {
+            max-width: 280px !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .logo-wrapper, .logo-wrapper._188px {
+            max-width: 240px !important;
+          }
+        }
+        @media screen and (min-width: 430px) and (max-width: 756px) {
+          .logo-wrapper, .logo-wrapper._188px {
+            max-width: 220px !important;
+          }
+        }
+        @media (max-width: 375px) {
+          .logo-wrapper, .logo-wrapper._188px {
+            max-width: 180px !important;
+          }
+        }
+        @media (max-width: 320px) {
+          .logo-wrapper, .logo-wrapper._188px {
+            max-width: 160px !important;
+          }
+        }
+        
         /* Mobile Navigation Improvements - Seamless Menu */
         @media (max-width: 991px) {
           .nav-menu-wrapper {
