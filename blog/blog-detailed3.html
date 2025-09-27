@@ -33,8 +33,13 @@
   "headline": "Form 10AB Filing Guide for Trusts, NGOs & Charitable Institutions in India",
   "description": "Learn all about Form 10AB under the Income-tax Act, 1961. Understand eligibility, filing process, deadlines, and documents required for NGO tax exemption and trust registration in India.",
   "author": {
-    "@type": "Organization",
-    "name": "Abraham & Kurian - Chartered Accountants"
+    "@type": "Person",
+    "name": "Amal Mohanan",
+    "jobTitle": "Senior Tax Consultant",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Abraham & Kurian - Chartered Accountants"
+    }
   },
   "publisher": {
     "@type": "Organization",
@@ -236,6 +241,65 @@
       }
     }
 
+    /* Simple Author Section Styles */
+    .author-section {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .simple-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .author-photo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #6ee7b7;
+    }
+
+    .author-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 4px 0;
+      line-height: 1.2;
+    }
+
+    .author-label {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    /* Mobile Responsive Styles for Simple Author */
+    @media (max-width: 767px) {
+      .simple-author {
+        justify-content: center;
+        text-align: left;
+      }
+      
+      .author-photo {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .author-name {
+        font-size: 1.1rem;
+      }
+      
+      .author-label {
+        font-size: 0.85rem;
+      }
+    }
+
     /* Responsive images */
     img {
       max-width: 100%;
@@ -407,6 +471,19 @@
       <div class="w-layout-blockcontainer container-default w-container">
         <div class="divider"></div>
       </div>
+
+      <!-- Author Section -->
+      <section class="section author-section">
+        <div class="w-layout-blockcontainer container-default w-container">
+          <div class="simple-author">
+            <img src="images/Amal_Mohanan.jpg" alt="Amal Mohanan" class="author-photo" />
+            <div class="author-details">
+              <h3 class="author-name">Amal Mohanan</h3>
+              <p class="author-label">Author of the blog</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section about-service-section">
         <div class="w-layout-blockcontainer container-default w-container">

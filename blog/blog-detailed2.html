@@ -30,8 +30,12 @@
   "headline": "Complete GST Compliance Guide for 2025: What Every Business Needs to Know",
   "description": "Comprehensive GST compliance guide for 2025 covering updates, amendments, e-invoicing, ITC reconciliation, and Kerala-specific considerations for businesses.",
   "author": {
-    "@type": "Organization",
-    "name": "Abraham & Kurian - Chartered Accountants"
+    "@type": "Person",
+    "name": "Justin Thomas",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Abraham & Kurian - Chartered Accountants"
+    }
   },
   "publisher": {
     "@type": "Organization",
@@ -222,6 +226,65 @@
         }
       }
 
+      /* Simple Author Section Styles */
+      .author-section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .simple-author {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .author-photo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #6ee7b7;
+      }
+
+      .author-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin: 0 0 4px 0;
+        line-height: 1.2;
+      }
+
+      .author-label {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0;
+        font-weight: 400;
+      }
+
+      /* Mobile Responsive Styles for Simple Author */
+      @media (max-width: 767px) {
+        .simple-author {
+          justify-content: center;
+          text-align: left;
+        }
+        
+        .author-photo {
+          width: 50px;
+          height: 50px;
+        }
+        
+        .author-name {
+          font-size: 1.1rem;
+        }
+        
+        .author-label {
+          font-size: 0.85rem;
+        }
+      }
+
       /* Responsive images */
       img {
         max-width: 100%;
@@ -393,6 +456,19 @@
       <div class="w-layout-blockcontainer container-default w-container">
         <div class="divider"></div>
       </div>
+
+      <!-- Author Section -->
+      <section class="section author-section">
+        <div class="w-layout-blockcontainer container-default w-container">
+          <div class="simple-author">
+            <img src="images/Justin_Thomas.jpg" alt="Justin Thomas" class="author-photo" />
+            <div class="author-details">
+              <h3 class="author-name">Justin Thomas</h3>
+              <p class="author-label">Author of the blog</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section about-service-section">
         <div class="w-layout-blockcontainer container-default w-container">
