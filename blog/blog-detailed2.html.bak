@@ -234,23 +234,20 @@
 
       .simple-author {
         display: flex;
-        flex-direction: column;
         align-items: center;
         gap: 16px;
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
-        text-align: center;
+        justify-content: center;
       }
 
       .author-photo {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         object-fit: cover;
-        object-position: center 20%;
-        border: 3px solid #6ee7b7;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 2px solid #6ee7b7;
       } 
 
       .author-name {
@@ -270,9 +267,9 @@
 
       /* Mobile Responsive Styles for Simple Author */
       @media (max-width: 767px) {
-        .author-photo {
-          width: 120px;
-          height: 120px;
+        .simple-author {
+          justify-content: center;
+          text-align: left;
         }
         
         .author-photo {
@@ -462,7 +459,7 @@
       </div>
 
       <!-- Author Section -->
-      <section class="section author-section" style="padding: 30px 0;">
+      <section class="section author-section">
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="simple-author">
             <img src="images/Justin_Thomas.jpg" alt="Justin Thomas" class="author-photo" />

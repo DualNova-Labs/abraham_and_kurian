@@ -249,30 +249,31 @@
 
     .simple-author {
       display: flex;
+      flex-direction: column;
       align-items: center;
       gap: 16px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 40px;
-      justify-content: center;
-      text-align: left;
+      max-width: 200px;
+      margin: 40px auto 0;
+      text-align: center;
     }
 
     .author-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 80%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
       object-fit: cover;
-      border: 2px solid #6ee7b7;
+      object-position: center 20%;
+      border: 3px solid #6ee7b7;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .author-name {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 600;
       color: #1a1a1a;
-      margin: 0 0 4px 0;
-      line-height: 1.2;
+      margin: 8px 0 0 0;
+      line-height: 1.3;
+      text-align: center;
     }
 
     .author-label {
@@ -289,14 +290,18 @@
         padding-bottom: 40px;
       }
       
+      .author-section {
+        padding: 30px 0;
+      }
+      
       .simple-author {
-        justify-content: center;
-        text-align: left;
+        max-width: 140px;
+        margin-top: 20px;
       }
       
       .author-photo {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
       }
       
       .author-name {
@@ -484,10 +489,10 @@
       <section class="section author-section">
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="simple-author">
-            <img src="images/Amal_Mohanan.jpg" alt="Amal Mohanan" class="author-photo" />
-            <div class="author-details">
-              <h3 class="author-name">Amal Mohanan</h3>
+            <div class="author-photo-container">
+              <img src="images/Amal_Mohanan.jpg" alt="Amal Mohanan" class="author-photo" />
             </div>
+            <h3 class="author-name">Amal Mohanan</h3>
           </div>
         </div>
       </section>
